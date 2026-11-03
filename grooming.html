@@ -481,5 +481,30 @@
         </div>
     </aside>
 
+
+    <button type="button" class="ayudante-abrir" id="ayudante-abrir" aria-haspopup="dialog" aria-controls="ayudante">
+        <span class="ayudante-abrir__icono" aria-hidden="true">?</span>
+        <span class="ayudante-abrir__texto">Ayudante</span>
+    </button>
+
+    <dialog class="ayudante" id="ayudante" aria-labelledby="ayudante-titulo">
+        <div class="ayudante__cabecera">
+            <h2 class="ayudante__titulo" id="ayudante-titulo">Ayudante de Prevención Digital</h2>
+            <button type="button" class="ayudante__cerrar" data-ayudante-cerrar aria-label="Cerrar el ayudante"><span aria-hidden="true">×</span></button>
+        </div>
+        <p class="ayudante__nota">Preguntas frecuentes sobre grooming, plataformas, apuestas e inteligencia artificial. La conversación queda solo en tu pantalla.</p>
+        <div class="ayudante__registro" id="ayudante-registro" role="log" aria-live="polite" aria-label="Conversación con el ayudante"></div>
+        <div class="ayudante__sugerencias" id="ayudante-sugerencias" aria-label="Preguntas sugeridas"></div>
+        <form class="ayudante__formulario" id="ayudante-form">
+            <label class="visualmente-oculto" for="ayudante-entrada">Escribí tu pregunta</label>
+            <div class="ayudante__fila">
+                <input class="ayudante__entrada" id="ayudante-entrada" type="text" maxlength="200" autocomplete="off" enterkeyhint="send" placeholder="Escribí tu pregunta">
+                <button type="submit" class="boton boton--acento">Enviar</button>
+            </div>
+        </form>
+    </dialog>
+
+    <script src="data/ayudante.js"></script>
+    <script src="js/ayudante.js"></script>
 </body>
 </html>
