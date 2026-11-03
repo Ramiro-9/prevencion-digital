@@ -40,7 +40,7 @@ No requiere instalación, build ni dependencias.
 
 ## Estado
 
-Fases 1 a 6 completas: contenido, base visual, navegación, accesibilidad y funciones interactivas. Los contadores animados quedan fuera hasta contar con estadísticas con fuente verificada. Pendientes: revisión final (fase 7) y publicación (fase 8).
+Fases 1 a 7 completas: contenido, base visual, navegación, accesibilidad, funciones interactivas y verificación final (links, fuentes, metadatos, tono y accesibilidad revisados el 3 de noviembre de 2026). Los contadores animados quedan fuera hasta contar con estadísticas con fuente verificada. Pendientes humanos antes de publicar (fase 8): revisión de docente u orientación, prueba en celular real, correo institucional y decisión sobre el video.
 
 ## Aviso
 
