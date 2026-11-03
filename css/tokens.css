@@ -1,0 +1,95 @@
+:root {
+    color-scheme: light;
+
+    --fondo: #f2f6fb;
+    --superficie: #ffffff;
+    --superficie-2: #e8f0f9;
+    --fondo-encabezado: #0d2a4a;
+    --texto: #14243a;
+    --texto-suave: #43546b;
+    --texto-inverso: #ffffff;
+    --texto-inverso-suave: #c9d8ea;
+    --borde: #c5d3e3;
+    --borde-fuerte: #7f95ad;
+
+    --primario: #174c8f;
+    --primario-hover: #103a70;
+    --primario-suave: #dce9f7;
+    --texto-sobre-primario: #ffffff;
+
+    --acento: #6a4cae;
+    --acento-hover: #583d94;
+    --acento-suave: #ece6f8;
+    --acento-texto: #4e3287;
+    --texto-sobre-acento: #ffffff;
+
+    --riesgo: #a61b12;
+    --riesgo-fondo: #fdecea;
+    --riesgo-borde: #e7a39c;
+
+    --medida: #146c33;
+    --medida-fondo: #e7f5ec;
+    --medida-borde: #9bcfae;
+
+    --atencion: #7a4d00;
+    --atencion-fondo: #fff5d9;
+    --atencion-borde: #e2c06a;
+
+    --info: #175a80;
+    --info-fondo: #e5f2f8;
+    --info-borde: #a5cfe1;
+
+    --foco: #0b63ce;
+    --foco-sobre-oscuro: #ffd166;
+    --foco-superficie: #0b63ce;
+
+    --sombra-sm: 0 1px 2px rgba(13, 42, 74, 0.08), 0 1px 3px rgba(13, 42, 74, 0.06);
+    --sombra-md: 0 6px 18px rgba(13, 42, 74, 0.10);
+    --sombra-lg: 0 16px 40px rgba(13, 42, 74, 0.16);
+
+    --fuente: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    --fuente-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+
+    --texto-xs: 0.8125rem;
+    --texto-sm: 0.9375rem;
+    --texto-base: 1.0625rem;
+    --texto-lg: 1.25rem;
+    --texto-xl: 1.5rem;
+    --texto-2xl: clamp(1.75rem, 3.5vw, 2.25rem);
+    --texto-3xl: clamp(2.2rem, 6vw, 3.4rem);
+    --linea-titulo: 1.12;
+    --linea-texto: 1.65;
+    --peso-normal: 400;
+    --peso-medio: 600;
+    --peso-fuerte: 700;
+    --peso-extra: 800;
+
+    --esp-1: 0.25rem;
+    --esp-2: 0.5rem;
+    --esp-3: 0.75rem;
+    --esp-4: 1rem;
+    --esp-5: 1.5rem;
+    --esp-6: 2rem;
+    --esp-7: 3rem;
+    --esp-8: 4rem;
+    --esp-9: 5rem;
+
+    --radio-sm: 0.375rem;
+    --radio-md: 0.75rem;
+    --radio-lg: 1.125rem;
+    --radio-pill: 999px;
+
+    --ancho-contenido: 70rem;
+    --ancho-texto: 68ch;
+    --alto-encabezado: 4.5rem;
+    --alto-barra-ayuda: 6.25rem;
+    --transicion: 180ms ease;
+    --transicion-lenta: 280ms ease;
+}
+
+@media (min-width: 720px) {
+    :root {
+        --alto-encabezado: 5rem;
+        --alto-barra-ayuda: 4.25rem;
+    }
+}

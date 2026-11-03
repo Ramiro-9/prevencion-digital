@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Política de privacidad | Prevención Digital</title>
+    <meta name="description" content="Qué datos no recolecta este sitio, cómo funciona el ayudante y el juego, y qué pasa con el tema visual y el video externo.">
+    <meta name="theme-color" content="#0d2a4a">
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/temas.css">
+</head>
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-sitio__interior">
+            <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                <span class="marca__monograma" aria-hidden="true">PD</span>
+                <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+            </a>
+
+            <nav class="nav-escritorio" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Grooming</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="grooming.html">Qué es el grooming</a></li>
+                                <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                                <li><a href="leyes.html">Leyes y protección</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Plataformas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="plataformas/discord.html">Discord</a></li>
+                                <li><a href="plataformas/roblox.html">Roblox</a></li>
+                                <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                                <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Temas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                                <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="chicos.html">Para chicos</a></li>
+                    <li><a href="familias.html">Para familias</a></li>
+                    <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <details class="selector-tema">
+                <summary>Tema</summary>
+                <div class="selector-tema__panel">
+                    <p class="selector-tema__titulo">Tema visual</p>
+                    <div class="selector-tema__opciones" role="group" aria-label="Tema visual">
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="nav-movil">
+                <summary>
+                    <span class="nav-movil__icono" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="nav-movil__texto-abrir">Menú</span>
+                    <span class="nav-movil__texto-cerrar">Cerrar</span>
+                </summary>
+                <nav class="nav-movil__panel" aria-label="Navegación móvil">
+                    <ul class="nav-movil__lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="chicos.html">Soy chico/a o adolescente</a></li>
+                        <li><a href="familias.html">Soy familiar o docente</a></li>
+                        <li class="nav-movil__grupo">Grooming</li>
+                        <li><a href="grooming.html">Qué es el grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes y protección</a></li>
+                        <li class="nav-movil__grupo">Plataformas</li>
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li class="nav-movil__grupo">Temas</li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                        <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                        <li class="nav-movil__grupo nav-movil__grupo--tema">Tema visual</li>
+                        <li class="nav-movil__tema">
+                            <div class="selector-tema__opciones selector-tema__opciones--movil" role="group" aria-label="Tema visual">
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <p class="visualmente-oculto" role="status" data-tema-estado></p>
+
+    <main id="contenido" tabindex="-1">
+        <section class="seccion">
+            <div class="contenedor">
+                <nav class="migas" aria-label="Migas de pan">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li aria-current="page">Privacidad</li>
+                    </ol>
+                </nav>
+                <div class="seccion__encabezado">
+                    <h1>Política de privacidad</h1>
+                    <p class="seccion__bajada">Qué datos no recolectamos, qué se guarda en tu navegador y cómo funcionan el ayudante, el juego y los enlaces externos.</p>
+                </div>
+                
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="que-no">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="que-no">Qué no recolectamos</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>No pedimos nombre, correo, teléfono ni datos personales.</li>
+        <li>No usamos formularios de registro.</li>
+        <li>No usamos analíticas ni cookies de seguimiento.</li>
+        <li>No guardamos conversaciones del ayudante.</li>
+        <li>No guardamos las respuestas del juego.</li>
+        <li>No vendemos ni compartimos datos con terceros.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="navegador">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="navegador">Qué se guarda en tu navegador</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>Solo se guarda tu preferencia de tema visual (claro, oscuro o alto contraste) en <code>localStorage</code>. Podés borrarla desde la configuración de tu navegador.</p>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="ayudante-juego">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="ayudante-juego">Ayudante y juego</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>El ayudante y el juego funcionan en tu navegador. No envían información a ningún servidor. No piden datos personales.</p>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="video">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="video">Video externo</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>Si el sitio incluye un video de YouTube, se carga solo cuando lo pedís y usa <code>youtube-nocookie.com</code>. Al reproducirlo, YouTube/Google pueden procesar datos según sus propias políticas. Si no querés eso, no lo reproduzcas.</p>
+</div>
+
+<!-- TODO-DECISIÓN: confirmar si se mantiene el video de Movistar España, se reemplaza por uno oficial o se omite. Si se incluye, usar youtube-nocookie.com y carga diferida. -->
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="enlaces">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="enlaces">Enlaces externos</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>El sitio enlaza a páginas oficiales del Estado argentino, organismos internacionales y plataformas. Esos sitios tienen sus propias políticas de privacidad.</p>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="contacto">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="contacto">Contacto</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>Si encontrás un error en el contenido o en un enlace, avisá a la institución o a la persona responsable de este proyecto educativo.</p>
+</div>
+
+<!-- TODO-DATO: agregar correo institucional de contacto cuando esté definido. -->
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="revision">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="revision">Última revisión</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>Última revisión de contenidos y fuentes: 3 de noviembre de 2026.</p>
+</div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor">
+            <div class="pie-sitio__grid">
+                <div class="pie-sitio__marca">
+                    <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                        <span class="marca__monograma" aria-hidden="true">PD</span>
+                        <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+                    </a>
+                    <p>Información clara sobre grooming y riesgos digitales, para chicos, adolescentes, familias y docentes.</p>
+                </div>
+
+                <nav aria-label="Secciones">
+                    <h2 class="pie-sitio__titulo">Secciones</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="grooming.html">Grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes</a></li>
+                        <li><a href="chicos.html">Para chicos</a></li>
+                        <li><a href="familias.html">Para familias</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Temas">
+                    <h2 class="pie-sitio__titulo">Temas</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Ayuda">
+                    <h2 class="pie-sitio__titulo">Ayuda</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="tel:137">Línea 137</a></li>
+                        <li><a href="tel:102">Línea 102</a></li>
+                        <li><a href="tel:911">911</a></li>
+                        <li><a href="ayuda.html">Todos los recursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pie-sitio__legal">
+                <p>Proyecto educativo de prevención digital. Finalidad educativa: no reemplaza asesoramiento profesional ni denuncias.</p>
+                <p>Última revisión: 3 de noviembre de 2026 · <a href="privacidad.html">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="barra-ayuda" aria-label="Ayuda inmediata">
+        <div class="contenedor barra-ayuda__interior">
+            <p class="barra-ayuda__titulo">Si necesitás ayuda ahora</p>
+            <ul class="barra-ayuda__lista">
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:137" aria-label="Llamar a la Línea 137, atención a violencia familiar y sexual y grooming">
+                        <span class="barra-ayuda__numero">137</span>
+                        <span class="barra-ayuda__etiqueta">Violencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:102" aria-label="Llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes">
+                        <span class="barra-ayuda__numero">102</span>
+                        <span class="barra-ayuda__etiqueta">Niñez</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:911" aria-label="Llamar al 911, emergencias">
+                        <span class="barra-ayuda__numero">911</span>
+                        <span class="barra-ayuda__etiqueta">Emergencias</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="barra-ayuda__mas" href="ayuda.html">Ver ayuda</a>
+        </div>
+    </aside>
+
+</body>
+</html>

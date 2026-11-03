@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acompañar sin culpar | Prevención Digital</title>
+    <meta name="description" content="Guía para familias y docentes sobre grooming: señales de alerta, cómo acompañar, cómo denunciar y marco legal.">
+    <meta name="theme-color" content="#0d2a4a">
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/temas.css">
+</head>
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-sitio__interior">
+            <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                <span class="marca__monograma" aria-hidden="true">PD</span>
+                <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+            </a>
+
+            <nav class="nav-escritorio" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Grooming</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="grooming.html">Qué es el grooming</a></li>
+                                <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                                <li><a href="leyes.html">Leyes y protección</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Plataformas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="plataformas/discord.html">Discord</a></li>
+                                <li><a href="plataformas/roblox.html">Roblox</a></li>
+                                <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                                <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Temas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                                <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="chicos.html">Para chicos</a></li>
+                    <li><a href="familias.html" aria-current="page">Para familias</a></li>
+                    <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <details class="selector-tema">
+                <summary>Tema</summary>
+                <div class="selector-tema__panel">
+                    <p class="selector-tema__titulo">Tema visual</p>
+                    <div class="selector-tema__opciones" role="group" aria-label="Tema visual">
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="nav-movil">
+                <summary>
+                    <span class="nav-movil__icono" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="nav-movil__texto-abrir">Menú</span>
+                    <span class="nav-movil__texto-cerrar">Cerrar</span>
+                </summary>
+                <nav class="nav-movil__panel" aria-label="Navegación móvil">
+                    <ul class="nav-movil__lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="chicos.html">Soy chico/a o adolescente</a></li>
+                        <li><a href="familias.html" aria-current="page">Soy familiar o docente</a></li>
+                        <li class="nav-movil__grupo">Grooming</li>
+                        <li><a href="grooming.html">Qué es el grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes y protección</a></li>
+                        <li class="nav-movil__grupo">Plataformas</li>
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li class="nav-movil__grupo">Temas</li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                        <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                        <li class="nav-movil__grupo nav-movil__grupo--tema">Tema visual</li>
+                        <li class="nav-movil__tema">
+                            <div class="selector-tema__opciones selector-tema__opciones--movil" role="group" aria-label="Tema visual">
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <p class="visualmente-oculto" role="status" data-tema-estado></p>
+
+    <main id="contenido" tabindex="-1">
+        <section class="seccion">
+            <div class="contenedor">
+                <nav class="migas" aria-label="Migas de pan">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li aria-current="page">Para familias y docentes</li>
+                    </ol>
+                </nav>
+                <div class="seccion__encabezado">
+                    <h1>Acompañar sin culpar: herramientas para familias y docentes</h1>
+                    <p class="seccion__bajada">Señales de alerta, pasos para acompañar y recursos legales para actuar sin revictimizar.</p>
+                </div>
+                <div class="prosa">
+    <p>Si un chico o una chica está pasando por una situación de grooming, lo más importante es que encuentre adultos que escuchen sin juzgar y que actúen con cuidado.</p>
+    <p>Esta guía no reemplaza el asesoramiento de un profesional ni la denuncia. Ordena los primeros pasos para no revictimizar y no perder pruebas.</p>
+</div>
+
+<div class="alerta alerta--info alerta--separada">
+    <span class="alerta__marca" aria-hidden="true">i</span>
+    <div class="alerta__contenido">
+        <p class="alerta__etiqueta">Dos formas de leer</p>
+        <p>Esta guía está escrita para familias y docentes. Si buscás la versión para chicos y adolescentes, <a href="chicos.html">entrá a la guía para chicos</a>.</p>
+    </div>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="que-es">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="que-es">Qué es el grooming</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>El grooming es el contacto de una persona adulta con una persona menor de edad, por medios electrónicos, con el propósito de cometer un delito contra su integridad sexual.</p>
+    <p>No siempre empieza con un pedido sexual. Muchas veces empieza con halagos, regalos, ayuda en un juego o una amistad que parece inofensiva. Después aparecen el secreto, el aislamiento y los pedidos.</p>
+</div>
+
+<blockquote class="cita">
+    <p>El artículo 131 del Código Penal, incorporado por la Ley 26.904 en 2013, prevé prisión de 6 meses a 4 años para quien contacta a una persona menor de edad por medios electrónicos con el propósito de cometer un delito contra su integridad sexual. La Ley 27.590, conocida como Ley Mica Ortega, crea el Programa Nacional de Prevención y Concientización del Grooming.</p>
+    <footer>Código Penal, artículo 131 · Ley 26.904 · Ley 27.590</footer>
+</blockquote>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="como-avanza">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="como-avanza">Cómo suele avanzar</h2>
+                    
+                </div>
+                <ol class="pasos">
+    <li>
+        <h3>Contacto</h3>
+        <p>En un juego, una red social, un servidor o un chat.</p>
+    </li>
+    <li>
+        <h3>Confianza</h3>
+        <p>Halagos, regalos, ayuda, intereses en común.</p>
+    </li>
+    <li>
+        <h3>Aislamiento</h3>
+        <p>“No le cuentes a nadie”, “tus viejos no te entienden”.</p>
+    </li>
+    <li>
+        <h3>Pedidos</h3>
+        <p>Fotos, videos, videollamadas, encuentros.</p>
+    </li>
+    <li>
+        <h3>Presión o extorsión</h3>
+        <p>Amenazas, culpa, chantaje.</p>
+    </li>
+</ol>
+
+<div class="fuente">
+    <p>No es una lista cerrada. Cada caso es distinto.</p>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="senales">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="senales">Señales de alerta</h2>
+                    <p class="seccion__bajada">Ninguna señal, por sí sola, confirma un caso. Pero varias juntas justifican una conversación tranquila.</p>
+                </div>
+                <div class="rejilla">
+    <article class="tarjeta">
+        <span class="etiqueta etiqueta--atencion">En el vínculo</span>
+        <h3>Cambios en el día a día</h3>
+        <ul>
+            <li>Secretismo con el celular o la computadora.</li>
+            <li>Cambios bruscos de humor, irritabilidad o aislamiento.</li>
+            <li>Miedo o ansiedad cuando suena una notificación.</li>
+            <li>Regalos, dinero o cosas nuevas sin explicación.</li>
+            <li>Abandono de actividades que antes le gustaban.</li>
+            <li>Mentiras sobre con quién habla o cuánto tiempo pasa conectado/a.</li>
+        </ul>
+    </article>
+
+    <article class="tarjeta">
+        <span class="etiqueta etiqueta--atencion">En el dispositivo</span>
+        <h3>Cuentas y conversaciones</h3>
+        <ul>
+            <li>Mensajes de personas que no conoce, sobre todo de adultos.</li>
+            <li>Aplicaciones nuevas que no sabe explicar.</li>
+            <li>Conversaciones que se borran o cuentas que cambian.</li>
+            <li>Pedidos de fotos, videos o videollamadas.</li>
+            <li>Invitaciones a pasar a otra app “más privada”.</li>
+        </ul>
+    </article>
+
+    <article class="tarjeta">
+        <span class="etiqueta etiqueta--atencion">En el dinero</span>
+        <h3>Gastos y pedidos</h3>
+        <ul>
+            <li>Pedidos de plata sin explicación.</li>
+            <li>Uso de tarjetas o billeteras virtuales sin permiso.</li>
+            <li>Deudas o gastos en juegos o apuestas.</li>
+            <li>Presión para pagar algo “urgente”.</li>
+        </ul>
+    </article>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="como-acompanar">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="como-acompanar">Cómo acompañar</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li><strong>Escuchá sin interrogar.</strong> No es un juicio. Es una conversación.</li>
+        <li><strong>No culpes.</strong> La responsabilidad es de la persona adulta que engañó.</li>
+        <li><strong>No confrontes al agresor.</strong> Puede aumentar el riesgo y dificultar la investigación.</li>
+        <li><strong>No borres pruebas.</strong> Capturas, usuarios, enlaces, fechas y horarios pueden ser importantes.</li>
+        <li><strong>No prometas secretos.</strong> Si hay riesgo, necesitás actuar.</li>
+        <li><strong>No tomes decisiones solo/a.</strong> Consultá con orientación escolar, un profesional o una línea de ayuda.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="paso-a-paso">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="paso-a-paso">Qué hacer paso a paso</h2>
+                    
+                </div>
+                <ol class="pasos">
+    <li>
+        <h3>Contené</h3>
+        <p>Decile al chico o a la chica que no está solo/a y que no es su culpa.</p>
+    </li>
+    <li>
+        <h3>Guardá pruebas</h3>
+        <p>Capturas de pantalla, nombre de usuario, enlaces, fechas y horarios. No borres la conversación.</p>
+    </li>
+    <li>
+        <h3>Bloqueá y reportá</h3>
+        <p>Usá las opciones de la plataforma.</p>
+    </li>
+    <li>
+        <h3>Consultá y denunciá</h3>
+        <p>Llamá al <strong>137</strong> o al <strong>102</strong>, o acercate a una fiscalía o comisaría. Si hay peligro ahora, llamá al <strong>911</strong>.</p>
+    </li>
+    <li>
+        <h3>Acompañá</h3>
+        <p>Si hay atención médica, psicológica o social, ayudalo/a a llegar.</p>
+    </li>
+    <li>
+        <h3>Cuidate vos también</h3>
+        <p>Pedí apoyo para la familia y para el equipo docente.</p>
+    </li>
+</ol>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="conversaciones">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="conversaciones">Conversaciones difíciles</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Elegí un momento tranquilo y sin pantallas de por medio.</li>
+        <li>Empezá por lo que observaste, sin acusar: “Me preocupa cómo estás, ¿querés contarme?”.</li>
+        <li>No prometas que no va a pasar nada. Mejor: “Vamos a buscar ayuda juntos/as”.</li>
+        <li>No preguntes detalles innecesarios. Alcanza con saber qué pasó y qué necesita.</li>
+        <li>Si el chico o la chica no quiere hablar, dejá la puerta abierta y buscá apoyo de un adulto de confianza.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="configuraciones">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="configuraciones">Configuraciones básicas</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Perfil privado y revisión de quién puede ver las publicaciones.</li>
+        <li>Mensajes directos solo para amigos o contactos conocidos.</li>
+        <li>Verificación en dos pasos en todas las cuentas.</li>
+        <li>Controles parentales y límites de gasto en juegos y tiendas.</li>
+        <li>Revisión periódica de amigos, servidores y aplicaciones.</li>
+        <li>Acuerdos claros sobre horarios y espacios sin pantallas.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="escuela">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="escuela">En la escuela</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Seguir el protocolo institucional y consultar al equipo de orientación.</li>
+        <li>No investigar por cuenta propia ni enfrentar al agresor.</li>
+        <li>Resguardar la confidencialidad y no exponer al chico o a la chica.</li>
+        <li>Informar a la familia y a los organismos de protección cuando corresponda.</li>
+        <li>Capacitar al personal sobre grooming, violencia digital y uso responsable de la tecnología.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="preguntas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="preguntas">Preguntas frecuentes</h2>
+                    
+                </div>
+                <details class="acordeon" open>
+    <summary>¿Tengo que borrar el celular o la computadora?</summary>
+    <div class="acordeon__contenido">
+        <p>No. Primero guardá pruebas y consultá. Borrar todo puede dificultar la investigación.</p>
+    </div>
+</details>
+
+<details class="acordeon">
+    <summary>¿Puedo denunciar si no estoy seguro/a?</summary>
+    <div class="acordeon__contenido">
+        <p>Sí. La Línea 137 y la Línea 102 pueden orientarte. Si hay peligro, llamá al 911.</p>
+    </div>
+</details>
+
+<details class="acordeon">
+    <summary>¿Y si la persona es alguien conocido?</summary>
+    <div class="acordeon__contenido">
+        <p>El grooming también puede ser cometido por alguien conocido. La ley no distingue. No enfrentes a la persona: buscá ayuda y denunciá.</p>
+    </div>
+</details>
+
+<details class="acordeon">
+    <summary>¿Y si mi hijo/a no quiere hablar?</summary>
+    <div class="acordeon__contenido">
+        <p>No lo/a obligues. Dejá la puerta abierta, mostrale que estás disponible y buscá apoyo de un adulto de confianza o de un profesional.</p>
+    </div>
+</details>
+
+<details class="acordeon">
+    <summary>¿Esto reemplaza una denuncia?</summary>
+    <div class="acordeon__contenido">
+        <p>No. El sitio es educativo. Para una denuncia, acercate a una fiscalía o comisaría, o llamá al 137.</p>
+    </div>
+</details>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="fuentes">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="fuentes">Fuentes</h2>
+                    
+                </div>
+                <div class="fuente">
+    <p>Fuentes consultadas el 3 de noviembre de 2026:</p>
+    <ul>
+        <li><a href="https://www.argentina.gob.ar/normativa/nacional/ley-27590-345231/texto">Ley 27.590, texto oficial (Argentina.gob.ar)</a>.</li>
+        <li><a href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/220000-224999/223586/norma.htm">Ley 26.904, artículo 131 del Código Penal (InfoLEG)</a>.</li>
+        <li><a href="https://www.argentina.gob.ar/justicia/violencia-familiar-sexual">Línea 137, Ministerio de Justicia (Argentina.gob.ar)</a>.</li>
+        <li><a href="https://www.argentina.gob.ar/capital-humano/familia/ninez-y-familia/linea-102">Línea 102, Ministerio de Capital Humano (Argentina.gob.ar)</a>.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="titulo-ayuda-pagina">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-ayuda-pagina">Si necesitás ayuda ahora</h2>
+                    <p class="seccion__bajada">No tenés que pasar por esto solo/a. Pedir ayuda es una forma de cuidarte.</p>
+                </div>
+                <div class="alerta alerta--info">
+                    <span class="alerta__marca" aria-hidden="true">i</span>
+                    <div class="alerta__contenido">
+                        <p class="alerta__etiqueta">Líneas de ayuda</p>
+                        <p><strong>137</strong> atiende violencia familiar y sexual y grooming las 24 horas. <strong>102</strong> escucha y orienta a chicas y chicos; no es una línea de emergencia. <strong>911</strong> es para emergencias. <a href="ayuda.html">Ver todos los recursos de ayuda</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor">
+            <div class="pie-sitio__grid">
+                <div class="pie-sitio__marca">
+                    <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                        <span class="marca__monograma" aria-hidden="true">PD</span>
+                        <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+                    </a>
+                    <p>Información clara sobre grooming y riesgos digitales, para chicos, adolescentes, familias y docentes.</p>
+                </div>
+
+                <nav aria-label="Secciones">
+                    <h2 class="pie-sitio__titulo">Secciones</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="grooming.html">Grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes</a></li>
+                        <li><a href="chicos.html">Para chicos</a></li>
+                        <li><a href="familias.html">Para familias</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Temas">
+                    <h2 class="pie-sitio__titulo">Temas</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Ayuda">
+                    <h2 class="pie-sitio__titulo">Ayuda</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="tel:137">Línea 137</a></li>
+                        <li><a href="tel:102">Línea 102</a></li>
+                        <li><a href="tel:911">911</a></li>
+                        <li><a href="ayuda.html">Todos los recursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pie-sitio__legal">
+                <p>Proyecto educativo de prevención digital. Finalidad educativa: no reemplaza asesoramiento profesional ni denuncias.</p>
+                <p>Última revisión: 3 de noviembre de 2026 · <a href="privacidad.html">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="barra-ayuda" aria-label="Ayuda inmediata">
+        <div class="contenedor barra-ayuda__interior">
+            <p class="barra-ayuda__titulo">Si necesitás ayuda ahora</p>
+            <ul class="barra-ayuda__lista">
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:137" aria-label="Llamar a la Línea 137, atención a violencia familiar y sexual y grooming">
+                        <span class="barra-ayuda__numero">137</span>
+                        <span class="barra-ayuda__etiqueta">Violencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:102" aria-label="Llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes">
+                        <span class="barra-ayuda__numero">102</span>
+                        <span class="barra-ayuda__etiqueta">Niñez</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:911" aria-label="Llamar al 911, emergencias">
+                        <span class="barra-ayuda__numero">911</span>
+                        <span class="barra-ayuda__etiqueta">Emergencias</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="barra-ayuda__mas" href="ayuda.html">Ver ayuda</a>
+        </div>
+    </aside>
+
+</body>
+</html>

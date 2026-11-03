@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muestra de componentes | Prevención Digital</title>
+    <meta name="description" content="Página interna de revisión visual de Prevención Digital.">
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="theme-color" content="#0d2a4a">
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/temas.css">
+</head>
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-sitio__interior">
+            <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                <span class="marca__monograma" aria-hidden="true">PD</span>
+                <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+            </a>
+
+            <nav class="nav-escritorio" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Grooming</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="grooming.html">Qué es el grooming</a></li>
+                                <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                                <li><a href="leyes.html">Leyes y protección</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Plataformas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="plataformas/discord.html">Discord</a></li>
+                                <li><a href="plataformas/roblox.html">Roblox</a></li>
+                                <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                                <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Temas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                                <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="chicos.html">Para chicos</a></li>
+                    <li><a href="familias.html">Para familias</a></li>
+                    <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <details class="selector-tema">
+                <summary>Tema</summary>
+                <div class="selector-tema__panel">
+                    <p class="selector-tema__titulo">Tema visual</p>
+                    <div class="selector-tema__opciones" role="group" aria-label="Tema visual">
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="nav-movil">
+                <summary>
+                    <span class="nav-movil__icono" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="nav-movil__texto-abrir">Menú</span>
+                    <span class="nav-movil__texto-cerrar">Cerrar</span>
+                </summary>
+                <nav class="nav-movil__panel" aria-label="Navegación móvil">
+                    <ul class="nav-movil__lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="chicos.html">Soy chico/a o adolescente</a></li>
+                        <li><a href="familias.html">Soy familiar o docente</a></li>
+                        <li class="nav-movil__grupo">Grooming</li>
+                        <li><a href="grooming.html">Qué es el grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes y protección</a></li>
+                        <li class="nav-movil__grupo">Plataformas</li>
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li class="nav-movil__grupo">Temas</li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                        <li><a class="nav-ayuda" href="ayuda.html">Ayuda</a></li>
+                        <li class="nav-movil__grupo nav-movil__grupo--tema">Tema visual</li>
+                        <li class="nav-movil__tema">
+                            <div class="selector-tema__opciones selector-tema__opciones--movil" role="group" aria-label="Tema visual">
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <p class="visualmente-oculto" role="status" data-tema-estado></p>
+
+    <main id="contenido" tabindex="-1">
+        <section class="seccion">
+            <div class="contenedor">
+                <nav class="migas" aria-label="Migas de pan">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li aria-current="page">Muestra de componentes</li>
+                    </ol>
+                </nav>
+
+                <div class="seccion__encabezado">
+                    <h1>Muestra de componentes</h1>
+                    <p class="seccion__bajada">Página interna para revisar la base visual en modo claro. No se enlaza desde la portada y no se indexa.</p>
+                </div>
+
+                <div class="alerta alerta--info">
+                    <span class="alerta__marca" aria-hidden="true">i</span>
+                    <div class="alerta__contenido">
+                        <p class="alerta__etiqueta">Revisión</p>
+                        <p>Esta página muestra botones, etiquetas, alertas, tarjetas, acordeones, línea de tiempo, pasos, citas y tablas. Los enlaces internos apuntan a las páginas que se crearán en la Fase 4.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-botones">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-botones">Botones</h2>
+                    <p class="seccion__bajada">Acciones principales, secundarias y alternativas. Todos tienen un objetivo táctil mínimo de 44 píxeles.</p>
+                </div>
+
+                <div class="grupo-botones">
+                    <a class="boton" href="index.html">Botón principal</a>
+                    <a class="boton boton--secundario" href="ayuda.html">Botón secundario</a>
+                    <a class="boton boton--acento" href="chicos.html">Botón de acento</a>
+                    <a class="boton boton--fantasma" href="familias.html">Botón fantasma</a>
+                    <a class="boton boton--grande" href="grooming.html">Botón grande</a>
+                    <button class="boton" type="button" disabled>Botón deshabilitado</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-etiquetas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-etiquetas">Etiquetas</h2>
+                    <p class="seccion__bajada">Siempre incluyen texto: el color no es el único indicador.</p>
+                </div>
+
+                <div class="grupo-botones">
+                    <span class="etiqueta">General</span>
+                    <span class="etiqueta etiqueta--acento">Informe</span>
+                    <span class="etiqueta etiqueta--info">Información</span>
+                    <span class="etiqueta etiqueta--atencion">Atención</span>
+                    <span class="etiqueta etiqueta--riesgo">Riesgo</span>
+                    <span class="etiqueta etiqueta--medida">Medida recomendada</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-alertas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-alertas">Alertas</h2>
+                    <p class="seccion__bajada">Cada variante tiene una etiqueta visible con el tipo de aviso.</p>
+                </div>
+
+                <div class="pila">
+                    <div class="alerta alerta--info">
+                        <span class="alerta__marca" aria-hidden="true">i</span>
+                        <div class="alerta__contenido">
+                            <p class="alerta__etiqueta">Información</p>
+                            <p>Este es un aviso informativo. Puede incluir un <a href="privacidad.html">enlace a otra página</a>.</p>
+                        </div>
+                    </div>
+
+                    <div class="alerta alerta--atencion">
+                        <span class="alerta__marca" aria-hidden="true">!</span>
+                        <div class="alerta__contenido">
+                            <p class="alerta__etiqueta">Atención</p>
+                            <p>Una señal que conviene mirar con cuidado y conversar con alguien de confianza.</p>
+                        </div>
+                    </div>
+
+                    <div class="alerta alerta--riesgo">
+                        <span class="alerta__marca" aria-hidden="true">!</span>
+                        <div class="alerta__contenido">
+                            <p class="alerta__etiqueta">Riesgo</p>
+                            <p>Una situación que requiere ayuda inmediata. Si hay peligro ahora, llamá al 911.</p>
+                        </div>
+                    </div>
+
+                    <div class="alerta alerta--medida">
+                        <span class="alerta__marca" aria-hidden="true">✓</span>
+                        <div class="alerta__contenido">
+                            <p class="alerta__etiqueta">Medida recomendada</p>
+                            <p>Una acción concreta para cuidarte o acompañar a otra persona.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-tarjetas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-tarjetas">Tarjetas</h2>
+                    <p class="seccion__bajada">Tarjeta simple, tarjeta enlazada y tarjeta de recurso de ayuda.</p>
+                </div>
+
+                <div class="rejilla">
+                    <article class="tarjeta">
+                        <span class="etiqueta etiqueta--acento">Ejemplo</span>
+                        <h3>Tarjeta simple</h3>
+                        <p>Agrupa información breve. El contenido mantiene el foco en el texto y no depende del color.</p>
+                    </article>
+
+                    <a class="tarjeta tarjeta--enlace" href="grooming.html">
+                        <span class="etiqueta etiqueta--acento">Informe</span>
+                        <h3>Tarjeta enlazada</h3>
+                        <p>Toda la tarjeta es un enlace y tiene un foco visible al navegar con teclado.</p>
+                        <span class="tarjeta__cta">Ver informe</span>
+                    </a>
+
+                    <article class="tarjeta recurso-ayuda">
+                        <p class="etiqueta etiqueta--info">Línea 137</p>
+                        <h3>Recurso de ayuda</h3>
+                        <p>Atención a víctimas de violencia familiar y sexual y grooming. Las 24 horas, los 365 días del año.</p>
+                        <a class="boton boton--secundario" href="tel:137">Llamar al 137</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-entradas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-entradas">Entradas de la portada</h2>
+                    <p class="seccion__bajada">Las dos lecturas del mismo contenido.</p>
+                </div>
+
+                <div class="entradas">
+                    <a class="entrada" href="chicos.html">
+                        <p class="entrada__etiqueta">Para chicos y adolescentes</p>
+                        <h2>Soy chico/a o adolescente</h2>
+                        <p>Entendé qué es el grooming, cómo cuidarte y qué hacer si algo te hace ruido.</p>
+                        <span class="entrada__cta">Entrar como chico/a o adolescente</span>
+                    </a>
+
+                    <a class="entrada entrada--familias" href="familias.html">
+                        <p class="entrada__etiqueta">Para familias y docentes</p>
+                        <h2>Soy familiar o docente</h2>
+                        <p>Encontrá señales de alerta, pasos para acompañar y recursos legales para actuar sin revictimizar.</p>
+                        <span class="entrada__cta">Entrar como familiar o docente</span>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-acordeones">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-acordeones">Acordeones</h2>
+                    <p class="seccion__bajada">Usan <code>details</code> y <code>summary</code>: funcionan con teclado y sin JavaScript.</p>
+                </div>
+
+                <details class="acordeon" open>
+                    <summary>¿Cómo se usa este componente?</summary>
+                    <div class="acordeon__contenido">
+                        <p>Cada acordeón tiene un título visible y un contenido breve. Se abre con Enter o con un toque.</p>
+                    </div>
+                </details>
+
+                <details class="acordeon">
+                    <summary>¿Qué pasa con el foco?</summary>
+                    <div class="acordeon__contenido">
+                        <p>El resumen se puede enfocar con Tab y tiene un anillo de foco visible. El contenido no se oculta a lectores de pantalla cuando está abierto.</p>
+                    </div>
+                </details>
+
+                <details class="acordeon">
+                    <summary>¿Se puede usar sin mouse?</summary>
+                    <div class="acordeon__contenido">
+                        <p>Sí. El elemento nativo se abre y se cierra con el teclado, sin depender de JavaScript.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-linea">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-linea">Línea de tiempo</h2>
+                    <p class="seccion__bajada">Ejemplo de estructura para hitos ordenados cronológicamente.</p>
+                </div>
+
+                <ol class="linea-tiempo">
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__fecha">Etapa 1</span>
+                        <h3>Primer hito</h3>
+                        <p>Texto breve para explicar qué ocurrió y por qué importa.</p>
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__fecha">Etapa 2</span>
+                        <h3>Segundo hito</h3>
+                        <p>La fecha o etapa se muestra con texto, no solo con color.</p>
+                    </li>
+                    <li class="linea-tiempo__item">
+                        <span class="linea-tiempo__fecha">Etapa 3</span>
+                        <h3>Tercer hito</h3>
+                        <p>El último elemento cierra la secuencia sin agregar una línea extra.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-pasos">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-pasos">Pasos</h2>
+                    <p class="seccion__bajada">Para instrucciones breves y ordenadas.</p>
+                </div>
+
+                <ol class="pasos">
+                    <li>
+                        <h3>Escuchar sin juzgar</h3>
+                        <p>La primera respuesta importa. No culpabilizar y no prometer secretos.</p>
+                    </li>
+                    <li>
+                        <h3>Guardar pruebas</h3>
+                        <p>Conservar mensajes, perfiles y fechas sin borrar la conversación.</p>
+                    </li>
+                    <li>
+                        <h3>Pedir ayuda</h3>
+                        <p>Contactar a un adulto de confianza o a una línea especializada.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-cita">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-cita">Cita y fuente</h2>
+                    <p class="seccion__bajada">Para destacar un mensaje central y citar de dónde sale un dato.</p>
+                </div>
+
+                <blockquote class="cita">
+                    <p>Pedir ayuda no es exagerar: es una forma de cuidarte.</p>
+                    <footer>Mensaje central del sitio</footer>
+                </blockquote>
+
+                <div class="fuente">
+                    <p>Fuente de ejemplo: <a href="ayuda.html">página de ayuda</a>. En las páginas reales, cada dato lleva organismo, informe, año y enlace.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-tabla">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-tabla">Tabla</h2>
+                    <p class="seccion__bajada">La tabla se puede desplazar horizontalmente en pantallas pequeñas y recibe foco de teclado.</p>
+                </div>
+
+                <div class="tabla-envoltura" role="region" aria-label="Tabla de componentes" tabindex="0">
+                    <table class="tabla">
+                        <caption>Componentes de la base visual</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">Componente</th>
+                                <th scope="col">Dónde se usa</th>
+                                <th scope="col">Estado</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Botones</td>
+                                <td>Acciones y enlaces principales</td>
+                                <td>Listo</td>
+                            </tr>
+                            <tr>
+                                <td>Alertas</td>
+                                <td>Avisos de riesgo, atención, información y medidas</td>
+                                <td>Listo</td>
+                            </tr>
+                            <tr>
+                                <td>Acordeones</td>
+                                <td>Consejos y preguntas frecuentes</td>
+                                <td>Listo</td>
+                            </tr>
+                            <tr>
+                                <td>Línea de tiempo</td>
+                                <td>Historia de la Ley Mica Ortega</td>
+                                <td>Listo</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="fuente">
+                    <p>Texto y enlaces: este párrafo muestra el estilo de lectura. Un <a href="leyes.html">enlace interno</a> se distingue por el subrayado y el color, no solo por el color.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor">
+            <div class="pie-sitio__grid">
+                <div class="pie-sitio__marca">
+                    <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                        <span class="marca__monograma" aria-hidden="true">PD</span>
+                        <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+                    </a>
+                    <p>Información clara sobre grooming y riesgos digitales, para chicos, adolescentes, familias y docentes.</p>
+                </div>
+
+                <nav aria-label="Secciones">
+                    <h2 class="pie-sitio__titulo">Secciones</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="grooming.html">Grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes</a></li>
+                        <li><a href="chicos.html">Para chicos</a></li>
+                        <li><a href="familias.html">Para familias</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Temas">
+                    <h2 class="pie-sitio__titulo">Temas</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Ayuda">
+                    <h2 class="pie-sitio__titulo">Ayuda</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="tel:137">Línea 137</a></li>
+                        <li><a href="tel:102">Línea 102</a></li>
+                        <li><a href="tel:911">911</a></li>
+                        <li><a href="ayuda.html">Todos los recursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pie-sitio__legal">
+                <p>Proyecto educativo de prevención digital. Finalidad educativa: no reemplaza asesoramiento profesional ni denuncias.</p>
+                <p>Última revisión: 3 de noviembre de 2026 · <a href="privacidad.html">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="barra-ayuda" aria-label="Ayuda inmediata">
+        <div class="contenedor barra-ayuda__interior">
+            <p class="barra-ayuda__titulo">Si necesitás ayuda ahora</p>
+            <ul class="barra-ayuda__lista">
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:137" aria-label="Llamar a la Línea 137, atención a violencia familiar y sexual y grooming">
+                        <span class="barra-ayuda__numero">137</span>
+                        <span class="barra-ayuda__etiqueta">Violencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:102" aria-label="Llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes">
+                        <span class="barra-ayuda__numero">102</span>
+                        <span class="barra-ayuda__etiqueta">Niñez</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:911" aria-label="Llamar al 911, emergencias">
+                        <span class="barra-ayuda__numero">911</span>
+                        <span class="barra-ayuda__etiqueta">Emergencias</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="barra-ayuda__mas" href="ayuda.html">Ver ayuda</a>
+        </div>
+    </aside>
+
+</body>
+</html>

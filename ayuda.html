@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si necesitás ayuda ahora | Prevención Digital</title>
+    <meta name="description" content="Líneas 137, 102 y 911, pasos para denunciar, qué pruebas guardar y cómo acompañar.">
+    <meta name="theme-color" content="#0d2a4a">
+    <script src="js/tema.js"></script>
+    <link rel="stylesheet" href="css/tokens.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/componentes.css">
+    <link rel="stylesheet" href="css/temas.css">
+</head>
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-sitio__interior">
+            <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                <span class="marca__monograma" aria-hidden="true">PD</span>
+                <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+            </a>
+
+            <nav class="nav-escritorio" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Grooming</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="grooming.html">Qué es el grooming</a></li>
+                                <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                                <li><a href="leyes.html">Leyes y protección</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Plataformas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="plataformas/discord.html">Discord</a></li>
+                                <li><a href="plataformas/roblox.html">Roblox</a></li>
+                                <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                                <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Temas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                                <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="chicos.html">Para chicos</a></li>
+                    <li><a href="familias.html">Para familias</a></li>
+                    <li><a class="nav-ayuda" href="ayuda.html" aria-current="page">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <details class="selector-tema">
+                <summary>Tema</summary>
+                <div class="selector-tema__panel">
+                    <p class="selector-tema__titulo">Tema visual</p>
+                    <div class="selector-tema__opciones" role="group" aria-label="Tema visual">
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="nav-movil">
+                <summary>
+                    <span class="nav-movil__icono" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="nav-movil__texto-abrir">Menú</span>
+                    <span class="nav-movil__texto-cerrar">Cerrar</span>
+                </summary>
+                <nav class="nav-movil__panel" aria-label="Navegación móvil">
+                    <ul class="nav-movil__lista">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="chicos.html">Soy chico/a o adolescente</a></li>
+                        <li><a href="familias.html">Soy familiar o docente</a></li>
+                        <li class="nav-movil__grupo">Grooming</li>
+                        <li><a href="grooming.html">Qué es el grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes y protección</a></li>
+                        <li class="nav-movil__grupo">Plataformas</li>
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li class="nav-movil__grupo">Temas</li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                        <li><a class="nav-ayuda" href="ayuda.html" aria-current="page">Ayuda</a></li>
+                        <li class="nav-movil__grupo nav-movil__grupo--tema">Tema visual</li>
+                        <li class="nav-movil__tema">
+                            <div class="selector-tema__opciones selector-tema__opciones--movil" role="group" aria-label="Tema visual">
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <p class="visualmente-oculto" role="status" data-tema-estado></p>
+
+    <main id="contenido" tabindex="-1">
+        <section class="seccion">
+            <div class="contenedor">
+                <nav class="migas" aria-label="Migas de pan">
+                    <ol>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li aria-current="page">Ayuda</li>
+                    </ol>
+                </nav>
+                <div class="seccion__encabezado">
+                    <h1>Si necesitás ayuda ahora</h1>
+                    <p class="seccion__bajada">Líneas de atención, pasos para denunciar y qué hacer para acompañar sin revictimizar.</p>
+                </div>
+                <div class="alerta alerta--riesgo">
+    <span class="alerta__marca" aria-hidden="true">!</span>
+    <div class="alerta__contenido">
+        <p class="alerta__etiqueta">Emergencia</p>
+        <p>Si hay peligro ahora, llamá al <a href="tel:911"><strong>911</strong></a>. La Línea 102 no es una línea de emergencia.</p>
+    </div>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="lineas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="lineas">Líneas de ayuda</h2>
+                    <p class="seccion__bajada">Podés llamar aunque no tengas todo claro. No necesitás certeza para consultar.</p>
+                </div>
+                <div class="rejilla">
+    <article class="tarjeta recurso-ayuda">
+        <p class="etiqueta etiqueta--info">Línea 137</p>
+        <h3>Violencia y grooming</h3>
+        <p>Atención a víctimas de violencia familiar y/o sexual y grooming. Funciona las 24 horas, los 365 días del año.</p>
+        <p>También podés escribir por WhatsApp al <strong>(54 11) 3133-1000</strong>.</p>
+        <p>Si hay peligro, las profesionales pueden comunicarse con el 911.</p>
+        <a class="boton boton--secundario" href="tel:137">Llamar al 137</a>
+    </article>
+
+    <article class="tarjeta recurso-ayuda recurso-ayuda--102">
+        <p class="etiqueta etiqueta--atencion">Línea 102</p>
+        <h3>Niñez y adolescencia</h3>
+        <p>Escucha, contención y orientación para niñas, niños y adolescentes. Es gratuita y confidencial.</p>
+        <p>Funciona en todo el país con equipos de cada provincia. No es una línea de emergencia.</p>
+        <a class="boton boton--secundario" href="tel:102">Llamar al 102</a>
+    </article>
+
+    <article class="tarjeta recurso-ayuda recurso-ayuda--911">
+        <p class="etiqueta etiqueta--riesgo">911</p>
+        <h3>Emergencias</h3>
+        <p>Central de Emergencias Nacional. Llamá si necesitás policía o una ambulancia, o si hay peligro ahora.</p>
+        <a class="boton boton--secundario" href="tel:911">Llamar al 911</a>
+    </article>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="denunciar">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="denunciar">Cómo denunciar</h2>
+                    
+                </div>
+                <ol class="pasos">
+    <li>
+        <h3>Si hay peligro ahora</h3>
+        <p>Llamá al <strong>911</strong>.</p>
+    </li>
+    <li>
+        <h3>Si no hay peligro inmediato</h3>
+        <p>Acercate a una <strong>fiscalía o comisaría</strong>.</p>
+    </li>
+    <li>
+        <h3>Pedí orientación</h3>
+        <p>También podés llamar al <strong>137</strong> para orientación y acompañamiento.</p>
+    </li>
+    <li>
+        <h3>Guardá pruebas</h3>
+        <p>Hacelo antes de borrar cualquier cosa.</p>
+    </li>
+    <li>
+        <h3>No enfrentes a la persona señalada</h3>
+        <p>Puede aumentar el riesgo y dificultar la investigación.</p>
+    </li>
+</ol>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="pruebas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="pruebas">Qué guardar como prueba</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Capturas de pantalla de la conversación.</li>
+        <li>Nombre de usuario, perfil y enlaces.</li>
+        <li>Fechas y horarios.</li>
+        <li>Correos o mensajes de la plataforma.</li>
+        <li>No borres la conversación original.</li>
+        <li>No compartas las pruebas innecesariamente.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="docentes-familias">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="docentes-familias">Para docentes y familias</h2>
+                    
+                </div>
+                <div class="rejilla">
+    <article class="tarjeta">
+        <span class="etiqueta etiqueta--acento">Docentes</span>
+        <h3>En la escuela</h3>
+        <ul>
+            <li>Activá el protocolo escolar y consultá al equipo de orientación.</li>
+            <li>No investigues por cuenta propia.</li>
+            <li>Resguardá la confidencialidad.</li>
+            <li>No expongas al chico o a la chica frente al grupo.</li>
+            <li>Informá a la familia y a los organismos de protección cuando corresponda.</li>
+        </ul>
+    </article>
+
+    <article class="tarjeta">
+        <span class="etiqueta etiqueta--acento">Familias</span>
+        <h3>En casa</h3>
+        <ul>
+            <li>Escuchá sin culpar.</li>
+            <li>No borres pruebas.</li>
+            <li>No confrontes al agresor.</li>
+            <li>Acompañá a la víctima.</li>
+            <li>Pedí ayuda profesional si hace falta.</li>
+        </ul>
+    </article>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="no-estas-seguro">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="no-estas-seguro">Si no estás seguro/a</h2>
+                    
+                </div>
+                <div class="alerta alerta--info">
+    <span class="alerta__marca" aria-hidden="true">i</span>
+    <div class="alerta__contenido">
+        <p class="alerta__etiqueta">Consultar también es cuidar</p>
+        <p>No necesitás tener certeza para consultar. La Línea 137 y la Línea 102 pueden orientarte. Si hay peligro, llamá al 911.</p>
+    </div>
+</div>
+
+<div class="fuente">
+    <p>Para apuestas y ludopatía en Ciudad de Buenos Aires, la Línea 108 brinda atención y orientación en adicciones. <a href="temas/ludopatia.html">Ver el tema de ludopatía</a>.</p>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="fuentes">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="fuentes">Fuentes</h2>
+                    
+                </div>
+                <div class="fuente">
+    <p>Fuentes consultadas el 3 de noviembre de 2026:</p>
+    <ul>
+        <li><a href="https://www.argentina.gob.ar/justicia/violencia-familiar-sexual">Línea 137, Ministerio de Justicia (Argentina.gob.ar)</a>.</li>
+        <li><a href="https://www.argentina.gob.ar/capital-humano/familia/ninez-y-familia/linea-102">Línea 102, Ministerio de Capital Humano (Argentina.gob.ar)</a>.</li>
+        <li><a href="https://www.argentina.gob.ar/tema/emergencias">911, Central de Emergencias Nacional (Argentina.gob.ar)</a>.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor">
+            <div class="pie-sitio__grid">
+                <div class="pie-sitio__marca">
+                    <a class="marca" href="index.html" aria-label="Prevención Digital, ir al inicio">
+                        <span class="marca__monograma" aria-hidden="true">PD</span>
+                        <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+                    </a>
+                    <p>Información clara sobre grooming y riesgos digitales, para chicos, adolescentes, familias y docentes.</p>
+                </div>
+
+                <nav aria-label="Secciones">
+                    <h2 class="pie-sitio__titulo">Secciones</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="grooming.html">Grooming</a></li>
+                        <li><a href="ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="leyes.html">Leyes</a></li>
+                        <li><a href="chicos.html">Para chicos</a></li>
+                        <li><a href="familias.html">Para familias</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Temas">
+                    <h2 class="pie-sitio__titulo">Temas</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="plataformas/discord.html">Discord</a></li>
+                        <li><a href="plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="plataformas/free-fire.html">Free Fire</a></li>
+                        <li><a href="temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="temas/ia.html">Inteligencia artificial</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Ayuda">
+                    <h2 class="pie-sitio__titulo">Ayuda</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="tel:137">Línea 137</a></li>
+                        <li><a href="tel:102">Línea 102</a></li>
+                        <li><a href="tel:911">911</a></li>
+                        <li><a href="ayuda.html">Todos los recursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pie-sitio__legal">
+                <p>Proyecto educativo de prevención digital. Finalidad educativa: no reemplaza asesoramiento profesional ni denuncias.</p>
+                <p>Última revisión: 3 de noviembre de 2026 · <a href="privacidad.html">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="barra-ayuda" aria-label="Ayuda inmediata">
+        <div class="contenedor barra-ayuda__interior">
+            <p class="barra-ayuda__titulo">Si necesitás ayuda ahora</p>
+            <ul class="barra-ayuda__lista">
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:137" aria-label="Llamar a la Línea 137, atención a violencia familiar y sexual y grooming">
+                        <span class="barra-ayuda__numero">137</span>
+                        <span class="barra-ayuda__etiqueta">Violencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:102" aria-label="Llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes">
+                        <span class="barra-ayuda__numero">102</span>
+                        <span class="barra-ayuda__etiqueta">Niñez</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:911" aria-label="Llamar al 911, emergencias">
+                        <span class="barra-ayuda__numero">911</span>
+                        <span class="barra-ayuda__etiqueta">Emergencias</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="barra-ayuda__mas" href="ayuda.html">Ver ayuda</a>
+        </div>
+    </aside>
+
+</body>
+</html>

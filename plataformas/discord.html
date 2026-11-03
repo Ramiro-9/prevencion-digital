@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discord: riesgos y seguridad | Prevención Digital</title>
+    <meta name="description" content="Cómo funcionan los chats de Discord, qué riesgos hay y cómo configurar la privacidad para chicos y familias.">
+    <meta name="theme-color" content="#0d2a4a">
+    <script src="../js/tema.js"></script>
+    <link rel="stylesheet" href="../css/tokens.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/componentes.css">
+    <link rel="stylesheet" href="../css/temas.css">
+</head>
+<body>
+
+    <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
+
+    <header class="encabezado-sitio">
+        <div class="contenedor encabezado-sitio__interior">
+            <a class="marca" href="../index.html" aria-label="Prevención Digital, ir al inicio">
+                <span class="marca__monograma" aria-hidden="true">PD</span>
+                <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+            </a>
+
+            <nav class="nav-escritorio" aria-label="Navegación principal">
+                <ul class="nav-lista">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Grooming</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="../grooming.html">Qué es el grooming</a></li>
+                                <li><a href="../ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                                <li><a href="../leyes.html">Leyes y protección</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Plataformas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="../plataformas/discord.html" aria-current="page">Discord</a></li>
+                                <li><a href="../plataformas/roblox.html">Roblox</a></li>
+                                <li><a href="../plataformas/minecraft.html">Minecraft</a></li>
+                                <li><a href="../plataformas/free-fire.html">Free Fire</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li>
+                        <details class="nav-grupo">
+                            <summary>Temas</summary>
+                            <ul class="nav-submenu">
+                                <li><a href="../temas/ludopatia.html">Ludopatía</a></li>
+                                <li><a href="../temas/ia.html">Inteligencia artificial</a></li>
+                            </ul>
+                        </details>
+                    </li>
+                    <li><a href="../chicos.html">Para chicos</a></li>
+                    <li><a href="../familias.html">Para familias</a></li>
+                    <li><a class="nav-ayuda" href="../ayuda.html">Ayuda</a></li>
+                </ul>
+            </nav>
+
+            <details class="selector-tema">
+                <summary>Tema</summary>
+                <div class="selector-tema__panel">
+                    <p class="selector-tema__titulo">Tema visual</p>
+                    <div class="selector-tema__opciones" role="group" aria-label="Tema visual">
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                        <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                    </div>
+                </div>
+            </details>
+
+            <details class="nav-movil">
+                <summary>
+                    <span class="nav-movil__icono" aria-hidden="true">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                    <span class="nav-movil__texto-abrir">Menú</span>
+                    <span class="nav-movil__texto-cerrar">Cerrar</span>
+                </summary>
+                <nav class="nav-movil__panel" aria-label="Navegación móvil">
+                    <ul class="nav-movil__lista">
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li><a href="../chicos.html">Soy chico/a o adolescente</a></li>
+                        <li><a href="../familias.html">Soy familiar o docente</a></li>
+                        <li class="nav-movil__grupo">Grooming</li>
+                        <li><a href="../grooming.html">Qué es el grooming</a></li>
+                        <li><a href="../ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="../leyes.html">Leyes y protección</a></li>
+                        <li class="nav-movil__grupo">Plataformas</li>
+                        <li><a href="../plataformas/discord.html" aria-current="page">Discord</a></li>
+                        <li><a href="../plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="../plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="../plataformas/free-fire.html">Free Fire</a></li>
+                        <li class="nav-movil__grupo">Temas</li>
+                        <li><a href="../temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="../temas/ia.html">Inteligencia artificial</a></li>
+                        <li><a class="nav-ayuda" href="../ayuda.html">Ayuda</a></li>
+                        <li class="nav-movil__grupo nav-movil__grupo--tema">Tema visual</li>
+                        <li class="nav-movil__tema">
+                            <div class="selector-tema__opciones selector-tema__opciones--movil" role="group" aria-label="Tema visual">
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="claro" aria-pressed="true">Claro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="oscuro" aria-pressed="false">Oscuro</button>
+                                <button type="button" class="selector-tema__opcion" data-tema-opcion="alto-contraste" aria-pressed="false">Alto contraste</button>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+            </details>
+        </div>
+    </header>
+
+    <p class="visualmente-oculto" role="status" data-tema-estado></p>
+
+    <main id="contenido" tabindex="-1">
+        <section class="seccion">
+            <div class="contenedor">
+                <nav class="migas" aria-label="Migas de pan">
+                    <ol>
+                        <li><a href="../index.html">Inicio</a></li>
+                        <li>Plataformas</li>
+                        <li aria-current="page">Discord</li>
+                    </ol>
+                </nav>
+                <div class="seccion__encabezado">
+                    <h1>Discord: riesgos y seguridad</h1>
+                    <p class="seccion__bajada">Chats de voz, video y texto en servidores: qué tener en cuenta y cómo configurar la privacidad.</p>
+                </div>
+                <div class="prosa">
+    <p>Discord es una plataforma de chat de texto, voz y video organizada en servidores y canales. Se usa para jugar, estudiar y participar en comunidades.</p>
+</div>
+
+<div class="alerta alerta--info alerta--separada">
+    <span class="alerta__marca" aria-hidden="true">i</span>
+    <div class="alerta__contenido">
+        <p class="alerta__etiqueta">Edad mínima</p>
+        <p>La edad mínima según los términos de Discord es de 13 años, y puede ser mayor en algunos países.</p>
+    </div>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="riesgos">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="riesgos">Riesgos</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Mensajes directos de personas desconocidas.</li>
+        <li>Servidores con poca moderación.</li>
+        <li>Invitaciones a servidores desconocidos o enlaces falsos.</li>
+        <li>Estafas con “Nitro gratis” o regalos que buscan robar la cuenta.</li>
+        <li>Videollamadas o chats de voz con desconocidos.</li>
+        <li>Pedidos para pasar a otra app más privada.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="cuidarte">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="cuidarte">Cómo cuidarte</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Revisá quién puede enviarte mensajes directos y solicitudes de amistad.</li>
+        <li>Activá la verificación en dos pasos.</li>
+        <li>Configurá los filtros de contenido que ofrece la plataforma.</li>
+        <li>Entrá solo a servidores conocidos, con reglas claras y moderadores visibles.</li>
+        <li>No hagas clic en enlaces desconocidos ni abras archivos de extraños.</li>
+        <li>Contale a un adulto si alguien te pide secreto o te insiste para pasar a otra app.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="familias">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="familias">Para familias</h2>
+                    
+                </div>
+                <div class="prosa">
+    <ul>
+        <li>Revisen juntos la lista de servidores y de amigos.</li>
+        <li>Acuerden a qué servidores se puede entrar.</li>
+        <li>Usen las herramientas de seguridad para adolescentes que ofrece Discord.</li>
+        <li>Hablen sobre el chat de voz y las videollamadas.</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion" aria-labelledby="grooming">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="grooming">Cómo se relaciona con el grooming</h2>
+                    
+                </div>
+                <div class="prosa">
+    <p>Un adulto puede acercarse en un servidor de juegos, hacerse pasar por alguien de la edad del chico o la chica y proponer seguir por mensaje directo, voz o video. Después aparecen el secreto y los pedidos.</p>
+</div>
+
+<div class="alerta alerta--atencion alerta--separada">
+    <span class="alerta__marca" aria-hidden="true">!</span>
+    <div class="alerta__contenido">
+        <p class="alerta__etiqueta">Señal de alerta</p>
+        <p>Si alguien te pide secreto, te ofrece regalos a cambio de algo o insiste para pasar a otra app, contale a un adulto de confianza. <a href="../grooming.html">Ver la guía completa sobre grooming</a>.</p>
+    </div>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="fuentes">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="fuentes">Fuentes oficiales</h2>
+                    
+                </div>
+                <div class="fuente">
+    <p>Fuentes consultadas el 3 de noviembre de 2026:</p>
+    <ul>
+        <li><a href="https://discord.com/terms">Discord Terms of Service</a> (edad mínima y condiciones de uso).</li>
+        <li><a href="https://discord.com/safety">Discord Safety Center</a> (herramientas de seguridad).</li>
+    </ul>
+</div>
+            </div>
+        </section>
+
+<section class="seccion seccion--alterna" aria-labelledby="titulo-ayuda-pagina">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-ayuda-pagina">Si necesitás ayuda ahora</h2>
+                    <p class="seccion__bajada">No tenés que pasar por esto solo/a. Pedir ayuda es una forma de cuidarte.</p>
+                </div>
+                <div class="alerta alerta--info">
+                    <span class="alerta__marca" aria-hidden="true">i</span>
+                    <div class="alerta__contenido">
+                        <p class="alerta__etiqueta">Líneas de ayuda</p>
+                        <p><strong>137</strong> atiende violencia familiar y sexual y grooming las 24 horas. <strong>102</strong> escucha y orienta a chicas y chicos; no es una línea de emergencia. <strong>911</strong> es para emergencias. <a href="../ayuda.html">Ver todos los recursos de ayuda</a>.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="pie-sitio">
+        <div class="contenedor">
+            <div class="pie-sitio__grid">
+                <div class="pie-sitio__marca">
+                    <a class="marca" href="../index.html" aria-label="Prevención Digital, ir al inicio">
+                        <span class="marca__monograma" aria-hidden="true">PD</span>
+                        <span class="marca__texto">Prevención Digital<small>Argentina</small></span>
+                    </a>
+                    <p>Información clara sobre grooming y riesgos digitales, para chicos, adolescentes, familias y docentes.</p>
+                </div>
+
+                <nav aria-label="Secciones">
+                    <h2 class="pie-sitio__titulo">Secciones</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="../grooming.html">Grooming</a></li>
+                        <li><a href="../ley-mica-ortega.html">Ley Mica Ortega</a></li>
+                        <li><a href="../leyes.html">Leyes</a></li>
+                        <li><a href="../chicos.html">Para chicos</a></li>
+                        <li><a href="../familias.html">Para familias</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Temas">
+                    <h2 class="pie-sitio__titulo">Temas</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="../plataformas/discord.html">Discord</a></li>
+                        <li><a href="../plataformas/roblox.html">Roblox</a></li>
+                        <li><a href="../plataformas/minecraft.html">Minecraft</a></li>
+                        <li><a href="../plataformas/free-fire.html">Free Fire</a></li>
+                        <li><a href="../temas/ludopatia.html">Ludopatía</a></li>
+                        <li><a href="../temas/ia.html">Inteligencia artificial</a></li>
+                    </ul>
+                </nav>
+
+                <nav aria-label="Ayuda">
+                    <h2 class="pie-sitio__titulo">Ayuda</h2>
+                    <ul class="pie-sitio__lista">
+                        <li><a href="tel:137">Línea 137</a></li>
+                        <li><a href="tel:102">Línea 102</a></li>
+                        <li><a href="tel:911">911</a></li>
+                        <li><a href="../ayuda.html">Todos los recursos</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="pie-sitio__legal">
+                <p>Proyecto educativo de prevención digital. Finalidad educativa: no reemplaza asesoramiento profesional ni denuncias.</p>
+                <p>Última revisión: 3 de noviembre de 2026 · <a href="../privacidad.html">Privacidad</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <aside class="barra-ayuda" aria-label="Ayuda inmediata">
+        <div class="contenedor barra-ayuda__interior">
+            <p class="barra-ayuda__titulo">Si necesitás ayuda ahora</p>
+            <ul class="barra-ayuda__lista">
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:137" aria-label="Llamar a la Línea 137, atención a violencia familiar y sexual y grooming">
+                        <span class="barra-ayuda__numero">137</span>
+                        <span class="barra-ayuda__etiqueta">Violencia</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:102" aria-label="Llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes">
+                        <span class="barra-ayuda__numero">102</span>
+                        <span class="barra-ayuda__etiqueta">Niñez</span>
+                    </a>
+                </li>
+                <li>
+                    <a class="barra-ayuda__enlace" href="tel:911" aria-label="Llamar al 911, emergencias">
+                        <span class="barra-ayuda__numero">911</span>
+                        <span class="barra-ayuda__etiqueta">Emergencias</span>
+                    </a>
+                </li>
+            </ul>
+            <a class="barra-ayuda__mas" href="../ayuda.html">Ver ayuda</a>
+        </div>
+    </aside>
+
+</body>
+</html>

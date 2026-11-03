@@ -1,0 +1,14 @@
+# Archivos internos del proceso
+.qoder/
+Referencias/
+BRIEF.md
+contenido-borrador.md
+
+# Sistema
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editores
+.vscode/
+.idea/
