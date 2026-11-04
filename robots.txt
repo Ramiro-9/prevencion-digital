@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /muestra.html
+
+Sitemap: https://ramiro-9.github.io/prevencion-digital/sitemap.xml

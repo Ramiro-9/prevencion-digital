@@ -19,6 +19,8 @@ Sitio educativo y accesible sobre grooming y riesgos digitales, pensado para chi
 - `css/`: tokens, base, componentes y temas visuales.
 - `js/`: selector de tema, ayudante y juego.
 - `data/`: datos del ayudante y del juego, separados del código.
+- `assets/`: favicon, icono para guardar en la pantalla de inicio y imagen para compartir el link.
+- `404.html`, `robots.txt` y `sitemap.xml`: páginas y archivos para buscadores (GitHub Pages muestra `404.html` cuando una ruta no existe).
 
 ## Cómo verlo
 
@@ -41,6 +43,14 @@ No requiere instalación, build ni dependencias.
 ## Estado
 
 Fases 1 a 7 completas: contenido, base visual, navegación, accesibilidad, funciones interactivas y verificación final (links, fuentes, metadatos, tono y accesibilidad revisados el 3 de noviembre de 2026). Los contadores animados quedan fuera hasta contar con estadísticas con fuente verificada. Pendientes humanos antes de publicar (fase 8): revisión de docente u orientación, prueba en celular real, correo institucional y decisión sobre el video.
+
+## Publicación
+
+El sitio se publica con GitHub Pages desde la rama `main` en `https://ramiro-9.github.io/prevencion-digital/`.
+
+- Si cambia la URL (por ejemplo, a una organización de la escuela o a un dominio propio), actualizar las 14 direcciones de `sitemap.xml` y la línea `Sitemap:` de `robots.txt`.
+- Después de subir cambios, abrir la URL pública en WhatsApp para comprobar que la imagen del link se ve.
+- `muestra.html` y `404.html` no van en el sitemap; `muestra.html` está excluida en `robots.txt`.
 
 ## Aviso
 
