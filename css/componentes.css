@@ -31,18 +31,10 @@
     color: var(--texto-inverso);
 }
 
-.marca__monograma {
-    display: grid;
+.marca__icono {
     flex: none;
-    place-items: center;
-    width: 2.35rem;
-    height: 2.35rem;
-    border-radius: var(--radio-md);
-    background: var(--acento);
-    color: var(--texto-sobre-acento);
-    font-size: 0.8rem;
-    font-weight: var(--peso-extra);
-    letter-spacing: 0.02em;
+    width: 2.375rem;
+    height: 2.375rem;
 }
 
 .marca__texto {
@@ -97,7 +89,7 @@
     color: var(--texto-inverso);
 }
 
-.nav-lista a[aria-current="page"] {
+.nav-lista > li > a[aria-current="page"] {
     background: rgba(255, 255, 255, 0.14);
     color: var(--texto-inverso);
 }
@@ -161,6 +153,16 @@
 .nav-submenu a:hover {
     background: var(--superficie-2);
     color: var(--primario);
+}
+
+.nav-submenu a[aria-current="page"] {
+    background: var(--primario-suave);
+    color: var(--primario);
+    font-weight: var(--peso-medio);
+}
+
+.nav-submenu a[aria-current="page"]:hover {
+    background: var(--superficie-2);
 }
 
 .nav-ayuda {
