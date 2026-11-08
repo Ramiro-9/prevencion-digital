@@ -416,6 +416,52 @@ main[data-seccion="ludopatia-alt"] {
     font-variant-numeric: tabular-nums;
 }
 
+.doc-seccion__bajada {
+    max-width: 60ch;
+    margin: calc(-1 * var(--esp-2)) 0 var(--esp-4);
+    color: var(--texto-suave);
+    font-size: var(--texto-lg);
+}
+
+.doc-intro {
+    margin-bottom: var(--esp-5);
+    padding-bottom: var(--esp-5);
+    border-bottom: 1px solid var(--borde);
+}
+
+/* Datos del encabezado de las páginas de temas, en la misma línea que la ficha. */
+.doc-datos {
+    display: grid;
+    gap: var(--esp-3) var(--esp-5);
+    margin: var(--esp-4) 0 0;
+    padding-top: var(--esp-3);
+    border-top: 1px solid var(--borde);
+}
+
+@media (min-width: 720px) {
+    .doc-datos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.doc-datos > div {
+    display: grid;
+    gap: 0.1rem;
+}
+
+.doc-datos dt {
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+}
+
+.doc-datos dd {
+    margin: 0;
+    color: var(--tema-texto);
+    font-size: var(--texto-xl);
+    font-weight: var(--peso-extra);
+    line-height: 1.1;
+}
+
 @media (max-width: 559px) {
     /* Los numerales ocupan mucho ancho en títulos que ya iban en dos líneas. */
     .doc-seccion > h2 {
@@ -828,6 +874,12 @@ main[data-seccion] .recurso-ayuda .boton:hover {
     }
 
     .doc-texto a[href^="#"]::after {
+        content: none;
+    }
+
+    /* El texto de un botón ya dice a dónde va; la URL larga rompía la tarjeta. */
+    .doc-texto a.boton[href^="http"]::after,
+    .doc-texto a.recurso-ayuda__enlace[href^="http"]::after {
         content: none;
     }
 
