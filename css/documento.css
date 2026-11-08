@@ -614,8 +614,9 @@ main[data-seccion] .recurso-ayuda .boton:hover {
     background: var(--superficie);
 }
 
+/* Color fijo en todas las páginas: la ayuda es del sitio, no del tema. */
 .doc-ayuda {
-    border-top: 3px solid var(--tema);
+    border-top: 3px solid var(--acento);
 }
 
 .doc-ayuda__titulo,
@@ -656,7 +657,7 @@ main[data-seccion] .recurso-ayuda .boton:hover {
 }
 
 .doc-ayuda__numero {
-    color: var(--tema-texto);
+    color: var(--primario);
     font-size: 1.35rem;
     font-weight: var(--peso-extra);
     font-variant-numeric: tabular-nums;
