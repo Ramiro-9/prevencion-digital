@@ -27,8 +27,9 @@
     <link rel="stylesheet" href="../css/base.css">
     <link rel="stylesheet" href="../css/componentes.css">
     <link rel="stylesheet" href="../css/temas.css">
+    <link rel="stylesheet" href="../css/documento.css">
 </head>
-<body>
+<body class="doc-pagina">
 
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
 
@@ -134,9 +135,8 @@
 
     <p class="visualmente-oculto" role="status" data-tema-estado></p>
 
-    <main id="contenido" tabindex="-1">
-        <section class="seccion">
-            <div class="contenedor">
+    <main id="contenido" tabindex="-1" data-seccion="plataformas"><header class="doc-cabecera">
+            <div class="doc-ancho doc-cabecera__borde">
                 <nav class="migas" aria-label="Migas de pan">
                     <ol>
                         <li><a href="../index.html">Inicio</a></li>
@@ -144,123 +144,122 @@
                         <li aria-current="page">Minecraft</li>
                     </ol>
                 </nav>
-                <div class="seccion__encabezado">
+                <div>
+                    <p class="doc-rotulo">Tema: Plataformas</p>
                     <h1>Minecraft: servidores, mods y seguridad</h1>
-                    <p class="seccion__bajada">Servidores públicos, mods y chat: cómo jugar acompañado y evitar enlaces y descargas riesgosas.</p>
+                    <p class="doc-cabecera__bajada">Servidores públicos, mods y chat: cómo jugar acompañado y evitar enlaces y descargas riesgosas.</p>
+                    <dl class="doc-ficha"><div><dt>Para quién</dt><dd>Chicos, familias y docentes</dd></div><div><dt>Última revisión</dt><dd>3 de noviembre de 2026</dd></div><div><dt>Lectura</dt><dd>2 min</dd></div><div><dt>Fuentes</dt><dd><a href="#fuentes">2 oficiales</a></dd></div></dl>
                 </div>
-                <div class="prosa">
-    <p>Minecraft es un juego de construcción y exploración. Se puede jugar solo, en familia o en servidores multijugador con muchas personas.</p>
-    <p>Muchos servidores públicos tienen sus propias reglas y no siempre moderan todo lo que pasa en el chat.</p>
-</div>
             </div>
-        </section>
+        </header>
 
-<section class="seccion seccion--alterna" aria-labelledby="riesgos">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="riesgos">Riesgos</h2>
-                    
-                </div>
-                <div class="prosa">
-    <ul>
-        <li>Servidores públicos sin moderación.</li>
-        <li>Invitaciones a otras redes, como Discord.</li>
-        <li>Mods o archivos descargados de sitios no confiables.</li>
-        <li>Chat público y mensajes privados con desconocidos.</li>
-        <li>Compras en servidores no oficiales que piden datos de pago.</li>
-        <li>Acoso o insultos dentro de las partidas.</li>
-    </ul>
-</div>
-            </div>
-        </section>
+        <div class="doc-ancho doc-rejilla">
+            <div class="doc-rejilla__columnas">
 
-<section class="seccion" aria-labelledby="cuidarte">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="cuidarte">Cómo cuidarte</h2>
-                    
-                </div>
-                <div class="prosa">
-    <ul>
-        <li>Jugá en servidores privados o con personas conocidas.</li>
-        <li>No descargues mods de sitios no verificados.</li>
-        <li>Usá los controles familiares de Microsoft/Xbox para limitar multijugador y chat.</li>
-        <li>Descargá mods solo de fuentes confiables y analizá los archivos.</li>
-        <li>Acordá con tu familia a qué servidores entrás.</li>
-    </ul>
-</div>
-            </div>
-        </section>
+                <details class="doc-indice" open>
+                    <summary>En esta página</summary>
+                    <nav aria-label="En esta página">
+                        <ol>
+                            <li><a href="#riesgos">Riesgos</a></li>
+                            <li><a href="#cuidarte">Cómo cuidarte</a></li>
+                            <li><a href="#familias">Para familias</a></li>
+                            <li><a href="#grooming">Cómo se relaciona con el grooming</a></li>
+                            <li><a href="#fuentes">Fuentes</a></li>
+                        </ol>
+                    </nav>
+                </details>
 
-<section class="seccion seccion--alterna" aria-labelledby="familias">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="familias">Para familias</h2>
-                    
-                </div>
-                <div class="prosa">
-    <ul>
-        <li>Creá un grupo familiar de Microsoft y configurá los permisos.</li>
-        <li>Revisá las opciones de multijugador y chat.</li>
-        <li>Acompañá las descargas de mods.</li>
-        <li>Hablen sobre las compras dentro de servidores.</li>
-    </ul>
-</div>
-            </div>
-        </section>
-
-<section class="seccion" aria-labelledby="grooming">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="grooming">Cómo se relaciona con el grooming</h2>
-                    
-                </div>
-                <div class="prosa">
-    <p>El contacto puede empezar de forma amable: ayudar a construir, regalar recursos o invitar a un servidor “especial”. Después la persona propone pasar a Discord u otra red privada, donde no hay moderadores.</p>
-</div>
-
-<div class="alerta alerta--atencion alerta--separada">
-    <span class="alerta__marca" aria-hidden="true">!</span>
-    <div class="alerta__contenido">
-        <p class="alerta__etiqueta">Señal de alerta</p>
-        <p>Si alguien que conociste en un servidor te invita a otra app o te pide datos, contale a un adulto de confianza. <a href="../grooming.html">Ver la guía sobre grooming</a>.</p>
-    </div>
-</div>
-            </div>
-        </section>
-
-<section class="seccion seccion--alterna" aria-labelledby="fuentes">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="fuentes">Fuentes oficiales</h2>
-                    
-                </div>
-                <div class="fuente">
-    <p>Fuentes consultadas el 3 de noviembre de 2026:</p>
-    <ul>
-        <li><a href="https://help.minecraft.net/hc/en-us/articles/4408968616077-Set-Up-Microsoft-Family-Groups-for-Parental-Controls-in-Minecraft">Minecraft Help, Microsoft Family Groups</a> (controles parentales).</li>
-        <li><a href="https://support.xbox.com/en-US/help/family-online-safety/online-safety/manage-a-members-safety-settings-to-access-minecraft-features">Xbox Support, seguridad para Minecraft</a> (multijugador y chat).</li>
-    </ul>
-</div>
-            </div>
-        </section>
-
-<section class="seccion seccion--alterna" aria-labelledby="titulo-ayuda-pagina">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="titulo-ayuda-pagina">Si necesitás ayuda ahora</h2>
-                    <p class="seccion__bajada">No tenés que pasar por esto solo/a. Pedir ayuda es una forma de cuidarte.</p>
-                </div>
-                <div class="alerta alerta--info">
-                    <span class="alerta__marca" aria-hidden="true">i</span>
-                    <div class="alerta__contenido">
-                        <p class="alerta__etiqueta">Líneas de ayuda</p>
-                        <p><strong>137</strong> atiende violencia familiar y sexual y grooming las 24 horas. <strong>102</strong> escucha y orienta a chicas y chicos; no es una línea de emergencia. <strong>911</strong> es para emergencias. <a href="../ayuda.html">Ver todos los recursos de ayuda</a>.</p>
+                <article class="doc-texto">
+                    <div class="prosa doc-intro">
+                        <p>Minecraft es un juego de construcción y exploración. Se puede jugar solo, en familia o en servidores multijugador con muchas personas.</p>
+                            <p>Muchos servidores públicos tienen sus propias reglas y no siempre moderan todo lo que pasa en el chat.</p>
                     </div>
-                </div>
+
+<section class="doc-seccion" aria-labelledby="riesgos" data-indice>
+                        <h2 id="riesgos">Riesgos</h2>
+                        <div class="prosa">
+                            <ul>
+                                <li>Servidores públicos sin moderación.</li>
+                                <li>Invitaciones a otras redes, como Discord.</li>
+                                <li>Mods o archivos descargados de sitios no confiables.</li>
+                                <li>Chat público y mensajes privados con desconocidos.</li>
+                                <li>Compras en servidores no oficiales que piden datos de pago.</li>
+                                <li>Acoso o insultos dentro de las partidas.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+<section class="doc-seccion" aria-labelledby="cuidarte" data-indice>
+                        <h2 id="cuidarte">Cómo cuidarte</h2>
+                        <div class="prosa">
+                            <ul>
+                                <li>Jugá en servidores privados o con personas conocidas.</li>
+                                <li>No descargues mods de sitios no verificados.</li>
+                                <li>Usá los controles familiares de Microsoft/Xbox para limitar multijugador y chat.</li>
+                                <li>Descargá mods solo de fuentes confiables y analizá los archivos.</li>
+                                <li>Acordá con tu familia a qué servidores entrás.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+<section class="doc-seccion" aria-labelledby="familias" data-indice>
+                        <h2 id="familias">Para familias</h2>
+                        <div class="prosa">
+                            <ul>
+                                <li>Creá un grupo familiar de Microsoft y configurá los permisos.</li>
+                                <li>Revisá las opciones de multijugador y chat.</li>
+                                <li>Acompañá las descargas de mods.</li>
+                                <li>Hablen sobre las compras dentro de servidores.</li>
+                            </ul>
+                        </div>
+                    </section>
+
+<section class="doc-seccion" aria-labelledby="grooming" data-indice>
+                        <h2 id="grooming">Cómo se relaciona con el grooming</h2>
+                        <div class="prosa">
+                            <p>El contacto puede empezar de forma amable: ayudar a construir, regalar recursos o invitar a un servidor “especial”. Después la persona propone pasar a Discord u otra red privada, donde no hay moderadores.</p>
+                        </div>
+                        <div class="alerta alerta--atencion alerta--separada">
+                            <span class="alerta__marca" aria-hidden="true">!</span>
+                            <div class="alerta__contenido">
+                                <p class="alerta__etiqueta">Señal de alerta</p>
+                                <p>Si alguien que conociste en un servidor te invita a otra app o te pide datos, contale a un adulto de confianza. <a href="../grooming.html">Ver la guía sobre grooming</a>.</p>
+                            </div>
+                        </div>
+                    </section>
+
+<section class="doc-seccion" aria-labelledby="fuentes" data-indice>
+                        <h2 id="fuentes">Fuentes</h2>
+                        <p class="doc-fuentes">Consultadas el 3 de noviembre de 2026:</p>
+                        <ol class="doc-fuentes">
+                            <li id="f1"><a href="https://help.minecraft.net/hc/en-us/articles/4408968616077-Set-Up-Microsoft-Family-Groups-for-Parental-Controls-in-Minecraft">Minecraft Help, Microsoft Family Groups</a> (controles parentales).</li>
+                            <li id="f2"><a href="https://support.xbox.com/en-US/help/family-online-safety/online-safety/manage-a-members-safety-settings-to-access-minecraft-features">Xbox Support, seguridad para Minecraft</a> (multijugador y chat).</li>
+                        </ol>
+                    </section>
+                </article>
+
+                <aside class="doc-lateral" aria-label="Ayuda y notas de esta página">
+                    <section class="doc-ayuda" aria-labelledby="doc-ayuda-titulo">
+                                            <h2 class="doc-ayuda__titulo" id="doc-ayuda-titulo">Si necesitás ayuda ahora</h2>
+                                            <ul>
+                                                <li><a href="tel:137" aria-label="137 Violencia: llamar a la Línea 137, violencia familiar, sexual y grooming"><span class="doc-ayuda__numero">137</span><span class="doc-ayuda__texto">Violencia familiar, sexual y grooming</span></a></li>
+                                                <li><a href="tel:102" aria-label="102 Niñez: llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes"><span class="doc-ayuda__numero">102</span><span class="doc-ayuda__texto">Niñas, niños y adolescentes</span></a></li>
+                                                <li><a href="tel:911" aria-label="911 Emergencias: llamar al 911"><span class="doc-ayuda__numero">911</span><span class="doc-ayuda__texto">Emergencias, si hay peligro ahora</span></a></li>
+                                            </ul>
+                                            <a class="doc-ayuda__mas" href="../ayuda.html">Todos los recursos de ayuda</a>
+                                        </section>
+                    <section class="doc-notas" aria-labelledby="doc-notas-titulo">
+                        <h2 class="doc-notas__titulo" id="doc-notas-titulo">Esta página</h2>
+                        <dl>
+                            <div><dt>Revisada</dt><dd>3 de noviembre de 2026</dd></div>
+                            <div><dt>Fuentes</dt><dd><a href="#fuentes">2 oficiales, en la sección 5</a></dd></div>
+                        </dl>
+                        <button type="button" class="doc-notas__boton" data-imprimir>Imprimir o guardar como PDF</button>
+                    </section>
+                </aside>
+
             </div>
-        </section>
-    </main>
+        </div></main>
 
     <footer class="pie-sitio">
         <div class="contenedor">
@@ -366,5 +365,77 @@
 
     <script src="../data/ayudante.js"></script>
     <script src="../js/ayudante.js"></script>
+    <script>
+    (function () {
+        "use strict";
+
+        var enlaces = {};
+        var lista = document.querySelectorAll(".doc-indice a");
+        for (var i = 0; i < lista.length; i += 1) {
+            enlaces[lista[i].getAttribute("href").slice(1)] = lista[i];
+        }
+
+        function marcar(id) {
+            for (var clave in enlaces) {
+                if (Object.prototype.hasOwnProperty.call(enlaces, clave)) {
+                    if (clave === id) {
+                        enlaces[clave].setAttribute("aria-current", "true");
+                    } else {
+                        enlaces[clave].removeAttribute("aria-current");
+                    }
+                }
+            }
+        }
+
+        var secciones = [];
+        var todos = document.querySelectorAll(".doc-seccion[data-indice]");
+        for (var j = 0; j < todos.length; j += 1) {
+            secciones.push(todos[j]);
+        }
+        var marcado = null;
+
+        function seccionVisible() {
+            var alta = window.innerHeight * 0.15;
+            var baja = window.innerHeight * 0.85;
+            for (var k = 0; k < secciones.length; k += 1) {
+                var r = secciones[k].getBoundingClientRect();
+                if (r.bottom > alta && r.top < baja) {
+                    return secciones[k].querySelector("h2").id;
+                }
+            }
+            return null;
+        }
+
+        function actualizar() {
+            var id = seccionVisible();
+            if (id && id !== marcado) {
+                marcado = id;
+                marcar(id);
+            }
+        }
+
+        var pendiente = false;
+        window.addEventListener("scroll", function () {
+            if (pendiente) {
+                return;
+            }
+            pendiente = true;
+            window.requestAnimationFrame(function () {
+                pendiente = false;
+                actualizar();
+            });
+        }, { passive: true });
+        window.addEventListener("resize", actualizar);
+        window.addEventListener("hashchange", actualizar);
+        actualizar();
+
+        var imprimir = document.querySelector("[data-imprimir]");
+        if (imprimir) {
+            imprimir.addEventListener("click", function () {
+                window.print();
+            });
+        }
+    })();
+    </script>
 </body>
 </html>

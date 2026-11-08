@@ -1,0 +1,917 @@
+/* ==========================================================================
+   Formato documento: cabecera con ficha, rejilla de 3 columnas (índice,
+   texto, lateral), secciones numeradas, tabla, línea de etapas y notas.
+   Usa los tokens existentes (tokens.css / temas.css). El color del tema es
+   solo de estructura; los colores semánticos (riesgo, medida, atención, info)
+   no cambian nunca.
+   ========================================================================== */
+
+/* ---- Color por tema (estructura) --------------------------------------- */
+/* data-seccion va en <main>. data-tema lo usa el selector claro, oscuro y
+   alto contraste: el modo claro no lleva atributo. */
+
+main[data-seccion] {
+    --tema: var(--primario);
+    --tema-suave: var(--primario-suave);
+    --tema-texto: var(--primario);
+    --texto-sobre-tema: var(--texto-sobre-primario);
+}
+
+/* Azul: grooming, leyes, plataformas y ayuda (heredan el bloque de arriba). */
+main[data-seccion="grooming"],
+main[data-seccion="ley-mica-ortega"],
+main[data-seccion="leyes"],
+main[data-seccion="ayuda"],
+main[data-seccion="plataformas"] {
+    --tema: #174c8f;
+    --tema-suave: #dce9f7;
+    --tema-texto: #174c8f;
+    --texto-sobre-tema: #ffffff;
+}
+
+/* Turquesa azulado: se distingue del verde de "medida". */
+main[data-seccion="ia"] {
+    --tema: #0f6b74;
+    --tema-suave: #d8eff1;
+    --tema-texto: #0c5a62;
+    --texto-sobre-tema: #ffffff;
+}
+
+/* Rosa: alternativa a ludopatía. El ámbar de tema no debe usarse: se confunde
+   con el de "atención". */
+main[data-seccion="ludopatia"],
+main[data-seccion="ludopatia-alt"] {
+    --tema: #be185d;
+    --tema-suave: #fce7f3;
+    --tema-texto: #9d174d;
+    --texto-sobre-tema: #ffffff;
+}
+
+[data-tema="oscuro"] main[data-seccion="grooming"],
+[data-tema="oscuro"] main[data-seccion="ley-mica-ortega"],
+[data-tema="oscuro"] main[data-seccion="leyes"],
+[data-tema="oscuro"] main[data-seccion="ayuda"],
+[data-tema="oscuro"] main[data-seccion="plataformas"] {
+    --tema: #8ab6ff;
+    --tema-suave: #172b49;
+    --tema-texto: #8ab6ff;
+    --texto-sobre-tema: #08111f;
+}
+
+[data-tema="oscuro"] main[data-seccion="ia"] {
+    --tema: #5fd4dc;
+    --tema-suave: #0c2b30;
+    --tema-texto: #8ae6dc;
+    --texto-sobre-tema: #04201d;
+}
+
+[data-tema="oscuro"] main[data-seccion="ludopatia"],
+[data-tema="oscuro"] main[data-seccion="ludopatia-alt"] {
+    --tema: #f9a8d4;
+    --tema-suave: #3a1226;
+    --tema-texto: #fbcfe8;
+    --texto-sobre-tema: #2a0a1a;
+}
+
+[data-tema="alto-contraste"] main[data-seccion] {
+    --tema: #ffffff;
+    --tema-suave: #000000;
+    --tema-texto: #ffffff;
+    --texto-sobre-tema: #000000;
+}
+
+/* ---- Cabecera del documento -------------------------------------------- */
+.doc-cabecera {
+    border-top: 6px solid var(--tema);
+    border-bottom: 1px solid var(--borde);
+    background: var(--superficie);
+    padding-block: var(--esp-5);
+}
+
+.doc-ancho {
+    width: min(100% - 2 * clamp(1rem, 4vw, 2rem), 80rem);
+    margin-inline: auto;
+}
+
+.doc-cabecera__borde {
+    display: grid;
+    gap: var(--esp-3) var(--esp-6);
+}
+
+.doc-cabecera .migas {
+    margin-bottom: 0;
+}
+
+.doc-rotulo {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin: 0 0 var(--esp-2);
+    color: var(--tema-texto);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-fuerte);
+}
+
+.doc-rotulo::before {
+    content: "";
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 2px;
+    background: var(--tema);
+}
+
+.doc-cabecera h1 {
+    max-width: 30ch;
+    margin-bottom: var(--esp-2);
+    font-size: var(--texto-2xl);
+}
+
+.doc-cabecera__bajada {
+    max-width: 62ch;
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: var(--texto-lg);
+}
+
+.doc-ficha {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    margin: var(--esp-4) 0 0;
+    padding-top: var(--esp-3);
+    border-top: 1px solid var(--borde);
+}
+
+.doc-ficha > div {
+    padding-inline: var(--esp-4);
+    border-left: 1px solid var(--borde);
+}
+
+.doc-ficha > div:first-child {
+    padding-left: 0;
+    border-left: 0;
+}
+
+.doc-ficha > div + div {
+    margin-left: var(--esp-4);
+}
+
+.doc-ficha dt {
+    color: var(--texto-suave);
+    font-size: var(--texto-xs);
+}
+
+.doc-ficha dd {
+    margin: 0;
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-medio);
+}
+
+@media (max-width: 559px) {
+    .doc-ficha {
+        gap: var(--esp-3) var(--esp-4);
+    }
+
+    .doc-ficha > div,
+    .doc-ficha > div:first-child {
+        padding: 0;
+        border-left: 0;
+    }
+
+    .doc-ficha > div + div {
+        margin-left: 0;
+    }
+}
+
+/* ---- Rejilla ----------------------------------------------------------- */
+.doc-ancho.doc-rejilla {
+    width: min(100%, 80rem);
+}
+
+.doc-rejilla {
+    padding-block: var(--esp-5) var(--esp-8);
+}
+
+.doc-rejilla__columnas {
+    padding-inline: clamp(1rem, 4vw, 2rem);
+}
+
+/* Sin rejilla el lateral no se muestra; la ayuda queda en la barra inferior. */
+.doc-lateral {
+    display: none;
+}
+
+.doc-texto {
+    min-width: 0;
+    counter-reset: seccion;
+}
+
+@media (min-width: 1100px) {
+    .doc-rejilla__columnas {
+        display: grid;
+        grid-template-columns: 13rem minmax(0, 44rem) 16rem;
+        justify-content: space-between;
+        gap: 2.5rem;
+        align-items: start;
+    }
+
+    /* El lateral es más alto que el viewport: con sticky + overflow, la
+       tarjeta de ayuda se iría al fondo. Se fija solo la tarjeta. */
+    .doc-indice {
+        position: sticky;
+        top: calc(var(--alto-encabezado) + var(--esp-4));
+        max-height: calc(100vh - var(--alto-encabezado) - var(--esp-6));
+        overflow-y: auto;
+    }
+
+    .doc-lateral {
+        display: grid;
+        gap: var(--esp-4);
+    }
+
+    .doc-lateral > .doc-ayuda {
+        position: sticky;
+        top: calc(var(--alto-encabezado) + var(--esp-4));
+    }
+
+    /* Acá la tarjeta de ayuda está siempre en pantalla. */
+    body.doc-pagina {
+        padding-bottom: 0;
+    }
+
+    body.doc-pagina .barra-ayuda {
+        display: none;
+    }
+
+    body.doc-pagina .ayudante-abrir {
+        bottom: var(--esp-5);
+    }
+}
+
+/* ---- Índice ------------------------------------------------------------ */
+.doc-indice {
+    margin-bottom: var(--esp-5);
+}
+
+.doc-indice > summary {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--esp-2);
+    min-height: 2.75rem;
+    padding: var(--esp-2) var(--esp-3);
+    border: 1px solid var(--borde-fuerte);
+    border-radius: var(--radio-sm);
+    background: var(--superficie);
+    color: var(--texto);
+    font-weight: var(--peso-fuerte);
+    list-style: none;
+    cursor: pointer;
+}
+
+.doc-indice > summary::-webkit-details-marker {
+    display: none;
+}
+
+.doc-indice > summary::after {
+    content: "▾";
+    margin-left: auto;
+    padding-left: var(--esp-3);
+    color: var(--tema-texto);
+}
+
+.doc-indice[open] > summary::after {
+    content: "▴";
+}
+
+.doc-indice ol {
+    margin: var(--esp-2) 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: indice;
+}
+
+.doc-indice li {
+    margin: 0;
+    counter-increment: indice;
+}
+
+.doc-indice a {
+    display: block;
+    padding: 0.35rem 0.75rem;
+    border-left: 2px solid var(--borde);
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+    line-height: 1.35;
+    text-decoration: none;
+}
+
+.doc-indice a::before {
+    content: counter(indice) ". ";
+    font-variant-numeric: tabular-nums;
+}
+
+.doc-indice a:hover {
+    border-left-color: var(--borde-fuerte);
+    background: var(--superficie-2);
+    color: var(--texto);
+    text-decoration: underline;
+}
+
+.doc-indice a[aria-current="true"] {
+    border-left-color: var(--tema);
+    background: var(--tema-suave);
+    color: var(--tema-texto);
+    font-weight: var(--peso-fuerte);
+}
+
+@media (min-width: 1100px) {
+    .doc-indice {
+        margin-bottom: 0;
+    }
+
+    /* La columna fija no admite un <details> plegable: el resumen pasa a ser
+       el título de la columna. */
+    .doc-indice > summary {
+        display: block;
+        min-height: 0;
+        padding: 0 0 var(--esp-2);
+        border: 0;
+        background: none;
+        color: var(--texto-suave);
+        font-size: var(--texto-xs);
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+        pointer-events: none;
+    }
+
+    .doc-indice > summary::after {
+        display: none;
+    }
+
+    .doc-indice ol {
+        margin-top: 0;
+    }
+
+    /* En la columna fija el <details> nunca se cierra. */
+    .doc-indice > ol {
+        display: block !important;
+    }
+
+    /* Sin display propio, Chromium deja de pintar los <a> dentro del
+       <details>. */
+    .doc-indice a {
+        display: block;
+    }
+}
+
+/* ---- Texto: resumen y secciones numeradas ------------------------------ */
+.doc-resumen {
+    margin-bottom: var(--esp-5);
+    padding: var(--esp-4) var(--esp-5);
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--tema);
+    border-radius: 0 var(--radio-md) var(--radio-md) 0;
+    background: var(--superficie);
+}
+
+.doc-resumen__titulo {
+    margin: 0 0 var(--esp-2);
+    color: var(--tema-texto);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-extra);
+}
+
+.doc-resumen ul {
+    margin: 0;
+}
+
+.doc-seccion {
+    padding-block: var(--esp-5);
+    border-top: 1px solid var(--borde);
+}
+
+.doc-seccion:last-child {
+    padding-bottom: 0;
+}
+
+.doc-resumen + .doc-seccion {
+    border-top: 0;
+    padding-top: var(--esp-3);
+}
+
+.doc-seccion > h2 {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5em;
+    margin-bottom: var(--esp-3);
+    font-size: var(--texto-xl);
+    counter-increment: seccion;
+}
+
+.doc-seccion > h2::before {
+    content: counter(seccion) ".";
+    flex: none;
+    min-width: 1.4em;
+    color: var(--tema-texto);
+    font-variant-numeric: tabular-nums;
+}
+
+.doc-seccion__bajada {
+    max-width: 60ch;
+    margin: calc(-1 * var(--esp-2)) 0 var(--esp-4);
+    color: var(--texto-suave);
+    font-size: var(--texto-lg);
+}
+
+.doc-intro {
+    margin-bottom: var(--esp-5);
+    padding-bottom: var(--esp-5);
+    border-bottom: 1px solid var(--borde);
+}
+
+/* Datos del encabezado de las páginas de temas, en la misma línea que la ficha. */
+.doc-datos {
+    display: grid;
+    gap: var(--esp-3) var(--esp-5);
+    margin: var(--esp-4) 0 0;
+    padding-top: var(--esp-3);
+    border-top: 1px solid var(--borde);
+}
+
+@media (min-width: 720px) {
+    .doc-datos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+.doc-datos > div {
+    display: grid;
+    gap: 0.1rem;
+}
+
+.doc-datos dt {
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+}
+
+.doc-datos dd {
+    margin: 0;
+    color: var(--tema-texto);
+    font-size: var(--texto-xl);
+    font-weight: var(--peso-extra);
+    line-height: 1.1;
+}
+
+@media (max-width: 559px) {
+    /* Los numerales ocupan mucho ancho en títulos que ya iban en dos líneas. */
+    .doc-seccion > h2 {
+        gap: 0.3em;
+    }
+
+    .doc-seccion > h2::before {
+        min-width: 0;
+    }
+}
+
+.doc-seccion h3 {
+    margin-top: var(--esp-5);
+    font-size: var(--texto-lg);
+}
+
+.doc-seccion h3:first-of-type {
+    margin-top: 0;
+}
+
+.doc-seccion .prosa {
+    max-width: none;
+}
+
+.doc-seccion .pasos {
+    max-width: none;
+}
+
+main[data-seccion] .tarjeta {
+    background: var(--superficie);
+}
+
+main[data-seccion] .pasos > li::before {
+    background: var(--tema);
+    color: var(--texto-sobre-tema);
+}
+
+main[data-seccion] .recurso-ayuda .boton {
+    border-color: var(--tema);
+    color: var(--tema-texto);
+}
+
+main[data-seccion] .recurso-ayuda .boton:hover {
+    background: var(--tema-suave);
+    color: var(--tema-texto);
+}
+
+.nota-ref {
+    font-size: 0.75em;
+    line-height: 0;
+    vertical-align: super;
+}
+
+.nota-ref a {
+    padding-inline: 0.1em;
+    font-weight: var(--peso-fuerte);
+}
+
+/* ---- Línea de etapas ---------------------------------------------------- */
+.doc-linea {
+    margin: var(--esp-4) 0 0;
+    padding: 0;
+    list-style: none;
+    counter-reset: etapa;
+}
+
+.doc-linea > li {
+    position: relative;
+    margin: 0;
+    padding: 0 0 var(--esp-4) 2.75rem;
+    counter-increment: etapa;
+}
+
+.doc-linea > li:last-child {
+    padding-bottom: 0;
+}
+
+.doc-linea > li::before {
+    content: counter(etapa);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: grid;
+    place-items: center;
+    width: 1.75rem;
+    height: 1.75rem;
+    border: 2px solid var(--tema);
+    border-radius: 50%;
+    background: var(--superficie);
+    color: var(--tema-texto);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-extra);
+}
+
+.doc-linea > li::after {
+    content: "";
+    position: absolute;
+    top: 1.95rem;
+    bottom: 0.2rem;
+    left: calc(0.875rem - 1px);
+    width: 2px;
+    background: var(--borde);
+}
+
+.doc-linea > li:last-child::after {
+    display: none;
+}
+
+.doc-linea > li.doc-linea__riesgo::before {
+    border-color: var(--riesgo);
+    background: var(--riesgo-fondo);
+    color: var(--riesgo);
+}
+
+.doc-linea .etiqueta {
+    margin-left: 0.5rem;
+    vertical-align: 0.1em;
+}
+
+.doc-linea strong {
+    margin-right: 0.35rem;
+}
+
+/* ---- Tabla -------------------------------------------------------------- */
+.doc-tabla-envoltura {
+    margin-block: var(--esp-4);
+    overflow-x: auto;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-md);
+    background: var(--superficie);
+}
+
+.doc-tabla {
+    width: 100%;
+    min-width: 30rem;
+    border-collapse: collapse;
+    font-size: var(--texto-sm);
+}
+
+.doc-tabla caption {
+    padding: var(--esp-3);
+    color: var(--texto-suave);
+    font-weight: var(--peso-fuerte);
+    text-align: left;
+}
+
+.doc-tabla th,
+.doc-tabla td {
+    padding: var(--esp-3);
+    border-top: 1px solid var(--borde);
+    text-align: left;
+    vertical-align: top;
+}
+
+.doc-tabla thead th {
+    background: var(--superficie-2);
+    font-size: var(--texto-xs);
+}
+
+.doc-tabla tbody th {
+    color: var(--tema-texto);
+    font-size: var(--texto-xl);
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.doc-tabla td:last-child {
+    white-space: nowrap;
+}
+
+/* ---- Lateral ------------------------------------------------------------ */
+.doc-ayuda,
+.doc-notas {
+    padding: var(--esp-4);
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-md);
+    background: var(--superficie);
+}
+
+.doc-ayuda {
+    border-top: 3px solid var(--tema);
+}
+
+.doc-ayuda__titulo,
+.doc-notas__titulo {
+    margin: 0 0 var(--esp-3);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-extra);
+}
+
+.doc-ayuda ul {
+    display: grid;
+    gap: var(--esp-2);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.doc-ayuda li {
+    margin: 0;
+}
+
+.doc-ayuda a {
+    display: grid;
+    grid-template-columns: 3.4rem 1fr;
+    align-items: center;
+    gap: var(--esp-2);
+    padding: 0.5rem 0.6rem;
+    border: 1px solid var(--borde);
+    border-radius: var(--radio-sm);
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.doc-ayuda a:hover {
+    border-color: var(--borde-fuerte);
+    background: var(--superficie-2);
+    color: var(--texto);
+}
+
+.doc-ayuda__numero {
+    color: var(--tema-texto);
+    font-size: 1.35rem;
+    font-weight: var(--peso-extra);
+    font-variant-numeric: tabular-nums;
+}
+
+.doc-ayuda__texto {
+    color: var(--texto-suave);
+    font-size: var(--texto-xs);
+    line-height: 1.3;
+}
+
+.doc-ayuda .doc-ayuda__mas {
+    display: inline-block;
+    margin-top: var(--esp-3);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-fuerte);
+}
+
+.doc-notas dl {
+    display: grid;
+    gap: var(--esp-2);
+    margin: 0 0 var(--esp-3);
+    font-size: var(--texto-sm);
+}
+
+.doc-notas dt {
+    color: var(--texto-suave);
+    font-size: var(--texto-xs);
+}
+
+.doc-notas dd {
+    margin: 0;
+}
+
+.doc-notas .doc-notas__boton {
+    width: 100%;
+    min-height: 2.75rem;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--borde-fuerte);
+    border-radius: var(--radio-sm);
+    background: var(--superficie);
+    color: var(--texto);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-medio);
+}
+
+.doc-notas .doc-notas__boton:hover {
+    border-color: var(--tema);
+    background: var(--tema-suave);
+    color: var(--texto);
+}
+
+/* ---- Fuentes ------------------------------------------------------------ */
+.doc-fuentes {
+    margin: var(--esp-3) 0 0;
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
+}
+
+.doc-fuentes li:target {
+    padding-inline: var(--esp-2);
+    border-radius: var(--radio-sm);
+    background: var(--tema-suave);
+}
+
+/* ---- Alto contraste ----------------------------------------------------- */
+[data-tema="alto-contraste"] .doc-cabecera,
+[data-tema="alto-contraste"] .doc-resumen,
+[data-tema="alto-contraste"] .doc-ayuda,
+[data-tema="alto-contraste"] .doc-notas,
+[data-tema="alto-contraste"] .doc-tabla-envoltura,
+[data-tema="alto-contraste"] .doc-indice > summary {
+    border-width: 2px;
+    border-color: #ffffff;
+}
+
+[data-tema="alto-contraste"] .doc-cabecera {
+    border-top-width: 6px;
+}
+
+[data-tema="alto-contraste"] .doc-ayuda {
+    border-top-width: 6px;
+}
+
+[data-tema="alto-contraste"] .doc-indice a[aria-current="true"] {
+    border-left-color: #ffffff;
+    background: #ffd400;
+    color: #000000;
+}
+
+[data-tema="alto-contraste"] .doc-rotulo::before {
+    border: 1px solid #ffffff;
+    background: #000000;
+}
+
+[data-tema="alto-contraste"] .doc-linea > li.doc-linea__riesgo::before {
+    border-color: #ffffff;
+}
+
+[data-tema="alto-contraste"] .doc-fuentes li:target {
+    outline: 2px solid #ffffff;
+    background: #000000;
+}
+
+/* ---- Impresión ---------------------------------------------------------- */
+@media print {
+    html,
+    body.doc-pagina {
+        padding-bottom: 0;
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .encabezado-sitio,
+    .barra-ayuda,
+    .ayudante-abrir,
+    .ayudante,
+    .selector-tema,
+    .nav-movil,
+    .salto-contenido,
+    .doc-indice,
+    .doc-lateral,
+    .pie-sitio__grid,
+    .pie-sitio__legal a {
+        display: none !important;
+    }
+
+    .doc-ancho {
+        width: 100%;
+    }
+
+    .doc-cabecera {
+        padding-block: 0 var(--esp-4);
+        border-bottom: 1px solid #000000;
+    }
+
+    .doc-cabecera h1 {
+        font-size: 1.75rem;
+    }
+
+    .doc-cabecera__bajada {
+        font-size: 1rem;
+    }
+
+    .doc-ficha {
+        margin-top: var(--esp-3);
+        padding-top: var(--esp-2);
+    }
+
+    .doc-rejilla {
+        padding-block: var(--esp-4) 0;
+    }
+
+    .doc-rejilla__columnas {
+        display: block;
+        padding: 0;
+    }
+
+    .doc-seccion {
+        padding-block: var(--esp-4);
+        break-inside: auto;
+    }
+
+    .doc-seccion > h2 {
+        break-after: avoid;
+    }
+
+    .doc-seccion h3 {
+        break-after: avoid;
+    }
+
+    .doc-seccion li,
+    .doc-tabla tr,
+    .alerta,
+    .doc-resumen {
+        break-inside: avoid;
+    }
+
+    .doc-texto a {
+        color: #000000;
+        text-decoration: none;
+    }
+
+    .doc-texto a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.75em;
+        word-break: break-all;
+    }
+
+    .doc-texto a[href^="#"]::after {
+        content: none;
+    }
+
+    /* El texto de un botón ya dice a dónde va; la URL larga rompía la tarjeta. */
+    .doc-texto a.boton[href^="http"]::after,
+    .doc-texto a.recurso-ayuda__enlace[href^="http"]::after {
+        content: none;
+    }
+
+    .doc-tabla-envoltura {
+        overflow: visible;
+    }
+
+    .doc-tabla th,
+    .doc-tabla td {
+        border-top-color: #000000;
+    }
+
+    .doc-tabla thead th {
+        background: #f0f0f0;
+    }
+
+    .pie-sitio {
+        margin-top: var(--esp-4);
+        padding-block: var(--esp-3) 0;
+        background: #ffffff;
+        color: #000000;
+    }
+
+    .pie-sitio,
+    .pie-sitio__marca p,
+    .pie-sitio__titulo,
+    .pie-sitio__legal,
+    .pie-sitio__legal p {
+        color: #000000;
+    }
+
+    .pie-sitio__legal {
+        border-top: 1px solid #000000;
+    }
+}

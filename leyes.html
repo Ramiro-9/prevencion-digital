@@ -27,8 +27,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/temas.css">
+    <link rel="stylesheet" href="css/documento.css">
 </head>
-<body>
+<body class="doc-pagina">
 
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
 
@@ -134,9 +135,8 @@
 
     <p class="visualmente-oculto" role="status" data-tema-estado></p>
 
-    <main id="contenido" tabindex="-1">
-        <section class="seccion">
-            <div class="contenedor">
+    <main id="contenido" tabindex="-1" data-seccion="leyes"><header class="doc-cabecera">
+            <div class="doc-ancho doc-cabecera__borde">
                 <nav class="migas" aria-label="Migas de pan">
                     <ol>
                         <li><a href="index.html">Inicio</a></li>
@@ -144,101 +144,115 @@
                         <li aria-current="page">Leyes y protección</li>
                     </ol>
                 </nav>
-                <div class="seccion__encabezado">
+                <div>
+                    <p class="doc-rotulo">Tema: Leyes</p>
                     <h1>Leyes argentinas sobre grooming y violencia digital</h1>
-                    <p class="seccion__bajada">Seis normas que protegen los derechos de niñas, niños y adolescentes, explicadas en simple y con enlaces oficiales.</p>
+                    <p class="doc-cabecera__bajada">Seis normas que protegen los derechos de niñas, niños y adolescentes, explicadas en simple y con enlaces oficiales.</p>
+                    <dl class="doc-ficha"><div><dt>Para quién</dt><dd>Familias y docentes</dd></div><div><dt>Última revisión</dt><dd>3 de noviembre de 2026</dd></div><div><dt>Lectura</dt><dd>2 min</dd></div><div><dt>Fuentes</dt><dd>Sin fuentes externas</dd></div></dl>
                 </div>
-                <div class="prosa">
-    <p>Estas normas protegen los derechos de niñas, niños y adolescentes y regulan delitos cometidos mediante tecnologías digitales.</p>
-    <p>Los resúmenes son educativos. Para consultar el texto vigente, usá los enlaces oficiales.</p>
-</div>
             </div>
-        </section>
+        </header>
 
-<section class="seccion seccion--alterna" aria-labelledby="normas">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="normas">Las normas</h2>
-                    
-                </div>
-                <div class="rejilla">
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2013</span>
-        <h3>Ley 26.904 — Grooming</h3>
-        <p>Incorporó el artículo 131 al Código Penal. Penas de 6 meses a 4 años para quien contacta a una persona menor de edad por medios electrónicos con el propósito de cometer un delito contra su integridad sexual.</p>
-        <p><a class="boton boton--secundario" href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/220000-224999/223586/norma.htm">Ver la Ley 26.904 en InfoLEG</a></p>
-    </article>
+        <div class="doc-ancho doc-rejilla">
+            <div class="doc-rejilla__columnas">
 
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2005</span>
-        <h3>Ley 26.061 — Protección integral</h3>
-        <p>Establece la protección integral de los derechos de niñas, niños y adolescentes. Reconoce su derecho a la integridad, la dignidad, la intimidad y la protección frente a la violencia.</p>
-        <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-26061-110778/texto">Ver la Ley 26.061 en Argentina.gob.ar</a></p>
-    </article>
+                <details class="doc-indice" open>
+                    <summary>En esta página</summary>
+                    <nav aria-label="En esta página">
+                        <ol>
+                            <li><a href="#normas">Las normas</a></li>
+                            <li><a href="#aviso-legal">Aviso legal</a></li>
+                        </ol>
+                    </nav>
+                </details>
 
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2020</span>
-        <h3>Ley 27.590 — Ley Mica Ortega</h3>
-        <p>Crea el Programa Nacional de Prevención y Concientización del Grooming o Ciberacoso contra Niñas, Niños y Adolescentes. Promueve la prevención, la capacitación de la comunidad educativa y la información sobre cómo denunciar.</p>
-        <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-27590-345231/texto">Ver la Ley 27.590 en Argentina.gob.ar</a></p>
-    </article>
-
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2015</span>
-        <h3>Ley 27.206 — Respeto a los tiempos de las víctimas</h3>
-        <p>Modifica el Código Penal en materia de prescripción de delitos contra la integridad sexual, para tener en cuenta los tiempos de las víctimas.</p>
-        <p><a class="boton boton--secundario" href="https://observatorio.senadoer.gob.ar/marco-legal/legislacion/ley/ley-n-27-206-ley-de-respeto-a-los-tiempos-de-las-victimas/">Ver la Ley 27.206 en el Observatorio del Senado</a></p>
-    </article>
-
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2000</span>
-        <h3>Ley 25.326 — Protección de datos personales</h3>
-        <p>Regula el tratamiento de datos personales y protege el derecho al honor y a la intimidad. Es la base del derecho de acceso, rectificación y supresión de datos.</p>
-        <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto">Ver la Ley 25.326 en Argentina.gob.ar</a></p>
-    </article>
-
-    <article class="tarjeta">
-        <span class="etiqueta etiqueta--info">2008</span>
-        <h3>Ley 26.388 — Delitos informáticos</h3>
-        <p>Modificó el Código Penal para incorporar y actualizar delitos cometidos mediante sistemas informáticos, como el acceso indebido a datos, la interceptación de comunicaciones y la difusión de imágenes.</p>
-        <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-26388-141790/texto">Ver la Ley 26.388 en Argentina.gob.ar</a></p>
-    </article>
-</div>
-            </div>
-        </section>
-
-<section class="seccion" aria-labelledby="aviso-legal">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="aviso-legal">Aviso legal</h2>
-                    
-                </div>
-                <div class="alerta alerta--atencion">
-    <span class="alerta__marca" aria-hidden="true">!</span>
-    <div class="alerta__contenido">
-        <p class="alerta__etiqueta">Finalidad educativa</p>
-        <p>Esta sección tiene finalidad educativa y no reemplaza asesoramiento jurídico. Para consultar el texto vigente de cada norma, usá las fuentes oficiales del Estado argentino.</p>
-    </div>
-</div>
-            </div>
-        </section>
-
-<section class="seccion seccion--alterna" aria-labelledby="titulo-ayuda-pagina">
-            <div class="contenedor">
-                <div class="seccion__encabezado">
-                    <h2 class="seccion__titulo" id="titulo-ayuda-pagina">Si necesitás ayuda ahora</h2>
-                    <p class="seccion__bajada">No tenés que pasar por esto solo/a. Pedir ayuda es una forma de cuidarte.</p>
-                </div>
-                <div class="alerta alerta--info">
-                    <span class="alerta__marca" aria-hidden="true">i</span>
-                    <div class="alerta__contenido">
-                        <p class="alerta__etiqueta">Líneas de ayuda</p>
-                        <p><strong>137</strong> atiende violencia familiar y sexual y grooming las 24 horas. <strong>102</strong> escucha y orienta a chicas y chicos; no es una línea de emergencia. <strong>911</strong> es para emergencias. <a href="ayuda.html">Ver todos los recursos de ayuda</a>.</p>
+                <article class="doc-texto">
+                    <div class="prosa doc-intro">
+                        <p>Estas normas protegen los derechos de niñas, niños y adolescentes y regulan delitos cometidos mediante tecnologías digitales.</p>
+                            <p>Los resúmenes son educativos. Para consultar el texto vigente, usá los enlaces oficiales.</p>
                     </div>
-                </div>
+
+<section class="doc-seccion" aria-labelledby="normas" data-indice>
+                        <h2 id="normas">Las normas</h2>
+                        <div class="rejilla">
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2013</span>
+                                <h3>Ley 26.904 — Grooming</h3>
+                                <p>Incorporó el artículo 131 al Código Penal. Penas de 6 meses a 4 años para quien contacta a una persona menor de edad por medios electrónicos con el propósito de cometer un delito contra su integridad sexual.</p>
+                                <p><a class="boton boton--secundario" href="https://servicios.infoleg.gob.ar/infolegInternet/anexos/220000-224999/223586/norma.htm">Ver la Ley 26.904 en InfoLEG</a></p>
+                            </article>
+                        
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2005</span>
+                                <h3>Ley 26.061 — Protección integral</h3>
+                                <p>Establece la protección integral de los derechos de niñas, niños y adolescentes. Reconoce su derecho a la integridad, la dignidad, la intimidad y la protección frente a la violencia.</p>
+                                <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-26061-110778/texto">Ver la Ley 26.061 en Argentina.gob.ar</a></p>
+                            </article>
+                        
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2020</span>
+                                <h3>Ley 27.590 — Ley Mica Ortega</h3>
+                                <p>Crea el Programa Nacional de Prevención y Concientización del Grooming o Ciberacoso contra Niñas, Niños y Adolescentes. Promueve la prevención, la capacitación de la comunidad educativa y la información sobre cómo denunciar.</p>
+                                <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-27590-345231/texto">Ver la Ley 27.590 en Argentina.gob.ar</a></p>
+                            </article>
+                        
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2015</span>
+                                <h3>Ley 27.206 — Respeto a los tiempos de las víctimas</h3>
+                                <p>Modifica el Código Penal en materia de prescripción de delitos contra la integridad sexual, para tener en cuenta los tiempos de las víctimas.</p>
+                                <p><a class="boton boton--secundario" href="https://observatorio.senadoer.gob.ar/marco-legal/legislacion/ley/ley-n-27-206-ley-de-respeto-a-los-tiempos-de-las-victimas/">Ver la Ley 27.206 en el Observatorio del Senado</a></p>
+                            </article>
+                        
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2000</span>
+                                <h3>Ley 25.326 — Protección de datos personales</h3>
+                                <p>Regula el tratamiento de datos personales y protege el derecho al honor y a la intimidad. Es la base del derecho de acceso, rectificación y supresión de datos.</p>
+                                <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-25326-64790/texto">Ver la Ley 25.326 en Argentina.gob.ar</a></p>
+                            </article>
+                        
+                            <article class="tarjeta">
+                                <span class="etiqueta etiqueta--info">2008</span>
+                                <h3>Ley 26.388 — Delitos informáticos</h3>
+                                <p>Modificó el Código Penal para incorporar y actualizar delitos cometidos mediante sistemas informáticos, como el acceso indebido a datos, la interceptación de comunicaciones y la difusión de imágenes.</p>
+                                <p><a class="boton boton--secundario" href="https://www.argentina.gob.ar/normativa/nacional/ley-26388-141790/texto">Ver la Ley 26.388 en Argentina.gob.ar</a></p>
+                            </article>
+                        </div>
+                    </section>
+
+<section class="doc-seccion" aria-labelledby="aviso-legal" data-indice>
+                        <h2 id="aviso-legal">Aviso legal</h2>
+                        <div class="alerta alerta--atencion">
+                            <span class="alerta__marca" aria-hidden="true">!</span>
+                            <div class="alerta__contenido">
+                                <p class="alerta__etiqueta">Finalidad educativa</p>
+                                <p>Esta sección tiene finalidad educativa y no reemplaza asesoramiento jurídico. Para consultar el texto vigente de cada norma, usá las fuentes oficiales del Estado argentino.</p>
+                            </div>
+                        </div>
+                    </section>
+                </article>
+
+                <aside class="doc-lateral" aria-label="Ayuda y notas de esta página">
+                    <section class="doc-ayuda" aria-labelledby="doc-ayuda-titulo">
+                                            <h2 class="doc-ayuda__titulo" id="doc-ayuda-titulo">Si necesitás ayuda ahora</h2>
+                                            <ul>
+                                                <li><a href="tel:137" aria-label="137 Violencia: llamar a la Línea 137, violencia familiar, sexual y grooming"><span class="doc-ayuda__numero">137</span><span class="doc-ayuda__texto">Violencia familiar, sexual y grooming</span></a></li>
+                                                <li><a href="tel:102" aria-label="102 Niñez: llamar a la Línea 102, escucha y orientación para niñas, niños y adolescentes"><span class="doc-ayuda__numero">102</span><span class="doc-ayuda__texto">Niñas, niños y adolescentes</span></a></li>
+                                                <li><a href="tel:911" aria-label="911 Emergencias: llamar al 911"><span class="doc-ayuda__numero">911</span><span class="doc-ayuda__texto">Emergencias, si hay peligro ahora</span></a></li>
+                                            </ul>
+                                            <a class="doc-ayuda__mas" href="ayuda.html">Todos los recursos de ayuda</a>
+                                        </section>
+                    <section class="doc-notas" aria-labelledby="doc-notas-titulo">
+                        <h2 class="doc-notas__titulo" id="doc-notas-titulo">Esta página</h2>
+                        <dl>
+                            <div><dt>Revisada</dt><dd>3 de noviembre de 2026</dd></div>
+                            
+                        </dl>
+                        <button type="button" class="doc-notas__boton" data-imprimir>Imprimir o guardar como PDF</button>
+                    </section>
+                </aside>
+
             </div>
-        </section>
-    </main>
+        </div></main>
 
     <footer class="pie-sitio">
         <div class="contenedor">
@@ -344,5 +358,77 @@
 
     <script src="data/ayudante.js"></script>
     <script src="js/ayudante.js"></script>
+    <script>
+    (function () {
+        "use strict";
+
+        var enlaces = {};
+        var lista = document.querySelectorAll(".doc-indice a");
+        for (var i = 0; i < lista.length; i += 1) {
+            enlaces[lista[i].getAttribute("href").slice(1)] = lista[i];
+        }
+
+        function marcar(id) {
+            for (var clave in enlaces) {
+                if (Object.prototype.hasOwnProperty.call(enlaces, clave)) {
+                    if (clave === id) {
+                        enlaces[clave].setAttribute("aria-current", "true");
+                    } else {
+                        enlaces[clave].removeAttribute("aria-current");
+                    }
+                }
+            }
+        }
+
+        var secciones = [];
+        var todos = document.querySelectorAll(".doc-seccion[data-indice]");
+        for (var j = 0; j < todos.length; j += 1) {
+            secciones.push(todos[j]);
+        }
+        var marcado = null;
+
+        function seccionVisible() {
+            var alta = window.innerHeight * 0.15;
+            var baja = window.innerHeight * 0.85;
+            for (var k = 0; k < secciones.length; k += 1) {
+                var r = secciones[k].getBoundingClientRect();
+                if (r.bottom > alta && r.top < baja) {
+                    return secciones[k].querySelector("h2").id;
+                }
+            }
+            return null;
+        }
+
+        function actualizar() {
+            var id = seccionVisible();
+            if (id && id !== marcado) {
+                marcado = id;
+                marcar(id);
+            }
+        }
+
+        var pendiente = false;
+        window.addEventListener("scroll", function () {
+            if (pendiente) {
+                return;
+            }
+            pendiente = true;
+            window.requestAnimationFrame(function () {
+                pendiente = false;
+                actualizar();
+            });
+        }, { passive: true });
+        window.addEventListener("resize", actualizar);
+        window.addEventListener("hashchange", actualizar);
+        actualizar();
+
+        var imprimir = document.querySelector("[data-imprimir]");
+        if (imprimir) {
+            imprimir.addEventListener("click", function () {
+                window.print();
+            });
+        }
+    })();
+    </script>
 </body>
 </html>
