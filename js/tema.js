@@ -6,12 +6,7 @@
     var CLAVE = "prevencion-digital-tema";
     var TEMAS = ["claro", "oscuro", "alto-contraste"];
     var NOMBRES = { claro: "claro", oscuro: "oscuro", "alto-contraste": "alto contraste" };
-    var COLORES = {
-        claro: { base: "#0d2a4a", ludopatia: "#0d2a4a", ia: "#0d2a4a" },
-        oscuro: { base: "#08111f", ludopatia: "#0b2417", ia: "#16101f" },
-        "alto-contraste": { base: "#000000", ludopatia: "#000000", ia: "#000000" }
-    };
-    var ACENTOS = ["ludopatia", "ia"];
+    var COLORES = { claro: "#0d2a4a", oscuro: "#08111f", "alto-contraste": "#000000" };
 
     function leerTema() {
         try {
@@ -28,15 +23,9 @@
         } else {
             document.documentElement.setAttribute("data-tema", tema);
         }
-        var acento = null;
-        for (var i = 0; i < ACENTOS.length; i += 1) {
-            if (document.documentElement.classList.contains("acento-" + ACENTOS[i])) {
-                acento = ACENTOS[i];
-            }
-        }
         var metas = document.querySelectorAll('meta[name="theme-color"]');
-        for (var j = 0; j < metas.length; j += 1) {
-            metas[j].setAttribute("content", COLORES[tema][acento || "base"]);
+        for (var i = 0; i < metas.length; i += 1) {
+            metas[i].setAttribute("content", COLORES[tema]);
         }
     }
 
