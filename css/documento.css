@@ -554,7 +554,7 @@ main[data-seccion] .recurso-ayuda .boton:hover {
     vertical-align: 0.1em;
 }
 
-.doc-linea strong {
+.doc-linea > li > strong:first-child {
     margin-right: 0.35rem;
 }
 
