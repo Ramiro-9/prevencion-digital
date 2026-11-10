@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/temas.css">
+    <link rel="stylesheet" href="css/documento.css">
 </head>
 <body>
 
@@ -124,7 +125,7 @@
 
     <p class="visualmente-oculto" role="status" data-tema-estado></p>
 
-    <main id="contenido" tabindex="-1">
+    <main id="contenido" tabindex="-1" data-seccion="grooming">
         <section class="seccion">
             <div class="contenedor">
                 <nav class="migas" aria-label="Migas de pan">
@@ -143,7 +144,7 @@
                     <span class="alerta__marca" aria-hidden="true">i</span>
                     <div class="alerta__contenido">
                         <p class="alerta__etiqueta">Revisión</p>
-                        <p>Esta página muestra botones, etiquetas, alertas, tarjetas, acordeones, línea de tiempo, pasos, citas y tablas. Los enlaces internos apuntan a las páginas que se crearán en la Fase 4.</p>
+                        <p>Esta página muestra botones, etiquetas, alertas, tarjetas, acordeones, línea de tiempo, pasos, línea de etapas, carriles de decisión, citas y tablas. Los enlaces internos apuntan a las páginas que se crearán en la Fase 4.</p>
                     </div>
                 </div>
             </div>
@@ -362,6 +363,47 @@
                         <p>Contactar a un adulto de confianza o a una línea especializada.</p>
                     </li>
                 </ol>
+            </div>
+        </section>
+
+        <section class="seccion seccion--alterna" aria-labelledby="titulo-linea-etapas">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-linea-etapas">Línea de etapas</h2>
+                    <p class="seccion__bajada">Para mostrar cómo avanza un proceso paso a paso. Las etapas de mayor riesgo llevan el rótulo escrito, no solo el color.</p>
+                </div>
+
+                <ol class="doc-linea">
+                    <li><strong>Contacto:</strong> mensaje, solicitud de amistad o invitación.</li>
+                    <li><strong>Confianza:</strong> halagos, regalos, intereses en común.</li>
+                    <li class="doc-linea__riesgo"><strong>Pedidos:</strong> fotos, videos o encuentros. <span class="etiqueta etiqueta--riesgo">Mayor riesgo</span></li>
+                    <li class="doc-linea__riesgo"><strong>Presión:</strong> culpa, amenazas, chantaje. <span class="etiqueta etiqueta--riesgo">Mayor riesgo</span></li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="seccion" aria-labelledby="titulo-carriles">
+            <div class="contenedor">
+                <div class="seccion__encabezado">
+                    <h2 class="seccion__titulo" id="titulo-carriles">Carriles de decisión</h2>
+                    <p class="seccion__bajada">Separa qué hacer según la situación. Cada carril tiene su rótulo escrito.</p>
+                </div>
+
+                <div class="doc-carriles">
+                    <section class="doc-carril doc-carril--riesgo" aria-labelledby="carril-muestra-peligro">
+                        <p class="etiqueta etiqueta--riesgo">Emergencia</p>
+                        <h3 id="carril-muestra-peligro">Hay peligro ahora</h3>
+                        <p>Llamá al <strong>911</strong>.</p>
+                    </section>
+                    <section class="doc-carril" aria-labelledby="carril-muestra-sin-peligro">
+                        <p class="etiqueta etiqueta--info">Sin peligro inmediato</p>
+                        <h3 id="carril-muestra-sin-peligro">No hay peligro ahora</h3>
+                        <ol class="doc-linea">
+                            <li><strong>Acercate:</strong> a una fiscalía o comisaría.</li>
+                            <li><strong>Pedí orientación:</strong> también podés llamar al 137.</li>
+                        </ol>
+                    </section>
+                </div>
             </div>
         </section>
 

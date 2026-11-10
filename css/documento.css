@@ -554,8 +554,52 @@ main[data-seccion] .recurso-ayuda .boton:hover {
     vertical-align: 0.1em;
 }
 
-.doc-linea strong {
+.doc-linea > li > strong:first-child {
     margin-right: 0.35rem;
+}
+
+/* ---- Carriles de decisión ---------------------------------------------- */
+.doc-carriles {
+    display: grid;
+    gap: var(--esp-3);
+    margin-top: var(--esp-4);
+}
+
+.doc-carril {
+    padding: var(--esp-3) var(--esp-4);
+    border: 1px solid var(--borde);
+    border-left: 4px solid var(--tema);
+    border-radius: var(--radio-md);
+    background: var(--superficie);
+}
+
+.doc-carril h3 {
+    margin: 0 0 var(--esp-2);
+}
+
+.doc-carril .doc-linea {
+    margin-top: 0;
+}
+
+.doc-carril--riesgo {
+    border-left-color: var(--riesgo);
+    background: var(--riesgo-fondo);
+}
+
+.doc-carril--riesgo h3,
+.doc-carril--riesgo .doc-linea > li::before {
+    color: var(--riesgo);
+}
+
+.doc-carril--riesgo .doc-linea > li::before {
+    border-color: var(--riesgo);
+}
+
+@media (min-width: 720px) {
+    .doc-carriles {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr);
+        align-items: start;
+    }
 }
 
 /* ---- Tabla -------------------------------------------------------------- */
@@ -822,6 +866,11 @@ main[data-seccion] .recurso-ayuda .boton:hover {
 
 [data-tema="alto-contraste"] .doc-linea > li.doc-linea__riesgo::before {
     border-color: #ffffff;
+}
+
+[data-tema="alto-contraste"] .doc-carril {
+    border-color: #ffffff;
+    border-left-width: 6px;
 }
 
 [data-tema="alto-contraste"] .doc-fuentes li:target {
