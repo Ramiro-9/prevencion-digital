@@ -213,31 +213,83 @@ main[data-seccion="ludopatia"] {
 }
 
 @media (min-width: 1100px) {
+    /* Bloque de una sola fila: a las columnas sticky les da como límite la
+       fila, y la fila mide el texto. Con grid, el límite era la rejilla
+       entera y los paneles no se fijaban. */
     .doc-rejilla__columnas {
-        display: grid;
-        grid-template-columns: 13rem minmax(0, 44rem) 16rem;
+        display: flex;
         justify-content: space-between;
         gap: 2.5rem;
-        align-items: start;
+        align-items: stretch;
+        overflow: clip;
+        overflow-clip-margin: 100vh;
     }
 
-    /* El lateral es más alto que el viewport: con sticky + overflow, la
-       tarjeta de ayuda se iría al fondo. Se fija solo la tarjeta. */
     .doc-indice {
+        flex: 0 0 13rem;
         position: sticky;
         top: calc(var(--alto-encabezado) + var(--esp-4));
         max-height: calc(100vh - var(--alto-encabezado) - var(--esp-6));
         overflow-y: auto;
+        align-self: flex-start;
+    }
+
+    .doc-texto {
+        flex: 0 1 44rem;
+        min-width: 0;
+        max-width: 44rem;
     }
 
     .doc-lateral {
         display: grid;
         gap: var(--esp-4);
+        flex: 0 0 16rem;
+        align-self: flex-start;
+        height: calc(100vh - var(--alto-encabezado) - var(--esp-4));
+        grid-auto-rows: max-content;
+        z-index: 2;
     }
 
-    .doc-lateral > .doc-ayuda {
-        position: sticky;
-        top: calc(var(--alto-encabezado) + var(--esp-4));
+    /* Sticky se suelta al pie de la página y el tope del scroll deja afuera
+       hasta la tarjeta de ayuda. El panel pasa a fijo apenas la fila entra en
+       pantalla, y sigue fijo hasta el final: la ayuda no se va nunca. */
+    @supports (animation-timeline: scroll(root)) {
+        .doc-lateral {
+            animation: doc-lateral-fijo linear both;
+            animation-timeline: scroll(root block);
+            animation-range: contain 0% contain 2px;
+        }
+
+        /* Fijo, el panel sale de la fila y el texto usaba su ancho. */
+        .doc-rejilla__columnas {
+            animation: doc-lateral-hueco linear both;
+            animation-timeline: scroll(root block);
+            animation-range: contain 0% contain 2px;
+        }
+
+        @keyframes doc-lateral-hueco {
+            to {
+                padding-right: calc(clamp(1rem, 4vw, 2rem) + 16rem + 2.5rem);
+            }
+        }
+
+        @keyframes doc-lateral-fijo {
+            to {
+                position: fixed;
+                top: calc(var(--alto-encabezado) + var(--esp-4));
+                right: calc((100vw - min(100vw, 80rem)) / 2 + clamp(1rem, 4vw, 2rem));
+                width: 16rem;
+                height: max-content;
+                max-height: calc(100vh - var(--alto-encabezado) - var(--esp-4));
+            }
+        }
+    }
+
+    /* Con poca altura la tarjeta de notas deja afuera la de ayuda. */
+    @media (max-height: 639px) {
+        .doc-lateral .doc-notas {
+            display: none;
+        }
     }
 
     /* Acá la tarjeta de ayuda está siempre en pantalla. */
@@ -718,22 +770,6 @@ main[data-seccion] .recurso-ayuda .boton:hover {
     margin-top: var(--esp-3);
     font-size: var(--texto-sm);
     font-weight: var(--peso-fuerte);
-}
-
-.doc-notas dl {
-    display: grid;
-    gap: var(--esp-2);
-    margin: 0 0 var(--esp-3);
-    font-size: var(--texto-sm);
-}
-
-.doc-notas dt {
-    color: var(--texto-suave);
-    font-size: var(--texto-xs);
-}
-
-.doc-notas dd {
-    margin: 0;
 }
 
 .doc-notas .doc-notas__boton {
