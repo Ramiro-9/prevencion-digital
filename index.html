@@ -28,7 +28,7 @@
     <link rel="stylesheet" href="css/componentes.css">
     <link rel="stylesheet" href="css/temas.css">
 </head>
-<body>
+<body class="doc-portada">
 
     <a class="salto-contenido" href="#contenido">Saltar al contenido</a>
 
@@ -135,13 +135,15 @@
     <p class="visualmente-oculto" role="status" data-tema-estado></p>
 
     <main id="contenido" tabindex="-1">
-        <section class="heroe" aria-labelledby="titulo-principal">
-            <div class="contenedor">
-                <p class="heroe__etiqueta">Prevención Digital · Argentina</p>
-                <h1 id="titulo-principal">Información clara para cuidarnos en internet</h1>
-                <p class="heroe__bajada">Para chicos, adolescentes, familias y docentes. Sin culpar a nadie y con un mensaje central: si algo te pasa, pedí ayuda a un adulto de confianza.</p>
+        <section class="portada__presentacion" aria-labelledby="titulo-principal">
+            <div class="contenedor portada__rejilla">
+                <div class="portada__cabecera">
+                    <p class="portada__rotulo">Prevención Digital · Argentina</p>
+                    <h1 id="titulo-principal">Información clara para cuidarnos en internet</h1>
+                    <p class="portada__bajada">Para chicos, adolescentes, familias y docentes. Sin culpar a nadie y con un mensaje central: si algo te pasa, pedí ayuda a un adulto de confianza.</p>
+                </div>
 
-                <div class="entradas">
+                <div class="entradas" aria-label="Entradas por perfil">
                     <a class="entrada" href="chicos.html">
                         <p class="entrada__etiqueta">Para chicos y adolescentes</p>
                         <h2>Soy chico/a o adolescente</h2>
@@ -210,55 +212,66 @@
                     <p class="seccion__bajada">Información para entender, prevenir y pedir ayuda. Cada tema tiene su propia página y sus fuentes.</p>
                 </div>
 
-                <div class="rejilla">
-                    <a class="tarjeta tarjeta--enlace" href="grooming.html">
-                        <span class="etiqueta etiqueta--acento">Informe</span>
-                        <h3>Grooming</h3>
-                        <p>Qué es, cómo empieza, señales de alerta y qué hacer.</p>
-                        <span class="tarjeta__cta">Ver informe</span>
-                    </a>
+                <div class="indice">
+                    <section class="indice__grupo" aria-labelledby="grupo-entender">
+                        <h3 class="indice__titulo" id="grupo-entender">Entender</h3>
+                        <ul class="indice__lista">
+                            <li>
+                                <a class="indice__enlace" href="grooming.html">
+                                    <span class="indice__nombre">Grooming</span>
+                                    <span class="indice__descripcion">Qué es, cómo empieza, señales de alerta y qué hacer.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="indice__enlace" href="ley-mica-ortega.html">
+                                    <span class="indice__nombre">Ley Mica Ortega</span>
+                                    <span class="indice__descripcion">La historia de Micaela y qué establece la Ley 27.590.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="indice__enlace" href="chicos.html#plataformas">
+                                    <span class="indice__nombre">Plataformas</span>
+                                    <span class="indice__descripcion">Discord, Roblox, Minecraft y Free Fire: riesgos y ajustes.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
 
-                    <a class="tarjeta tarjeta--enlace" href="ley-mica-ortega.html">
-                        <span class="etiqueta etiqueta--acento">Ley</span>
-                        <h3>Ley Mica Ortega</h3>
-                        <p>La historia de Micaela y qué establece la Ley 27.590.</p>
-                        <span class="tarjeta__cta">Conocer la ley</span>
-                    </a>
+                    <section class="indice__grupo" aria-labelledby="grupo-temas">
+                        <h3 class="indice__titulo" id="grupo-temas">Temas</h3>
+                        <ul class="indice__lista">
+                            <li>
+                                <a class="indice__enlace" href="temas/ludopatia.html">
+                                    <span class="indice__nombre">Ludopatía</span>
+                                    <span class="indice__descripcion">Apuestas en línea, señales y prevención.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="indice__enlace" href="temas/ia.html">
+                                    <span class="indice__nombre">Inteligencia artificial</span>
+                                    <span class="indice__descripcion">Deepfakes, perfiles falsos y cuidado de datos.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
 
-                    <a class="tarjeta tarjeta--enlace" href="chicos.html#plataformas">
-                        <span class="etiqueta etiqueta--acento">Informe</span>
-                        <h3>Plataformas</h3>
-                        <p>Discord, Roblox, Minecraft y Free Fire: riesgos y ajustes.</p>
-                        <span class="tarjeta__cta">Ver plataformas</span>
-                    </a>
-
-                    <a class="tarjeta tarjeta--enlace" href="temas/ludopatia.html">
-                        <span class="etiqueta etiqueta--acento">Tema</span>
-                        <h3>Ludopatía</h3>
-                        <p>Apuestas en línea, señales y prevención.</p>
-                        <span class="tarjeta__cta">Leer el tema</span>
-                    </a>
-
-                    <a class="tarjeta tarjeta--enlace" href="temas/ia.html">
-                        <span class="etiqueta etiqueta--acento">Tema</span>
-                        <h3>Inteligencia artificial</h3>
-                        <p>Deepfakes, perfiles falsos y cuidado de datos.</p>
-                        <span class="tarjeta__cta">Leer el tema</span>
-                    </a>
-
-                    <a class="tarjeta tarjeta--enlace" href="leyes.html">
-                        <span class="etiqueta etiqueta--acento">Normativa</span>
-                        <h3>Leyes</h3>
-                        <p>Normas argentinas con enlaces oficiales.</p>
-                        <span class="tarjeta__cta">Ver leyes</span>
-                    </a>
-
-                    <a class="tarjeta tarjeta--enlace" href="ayuda.html">
-                        <span class="etiqueta etiqueta--acento">Recursos</span>
-                        <h3>Ayuda</h3>
-                        <p>Líneas, pasos para denunciar y qué guardar como prueba.</p>
-                        <span class="tarjeta__cta">Ver recursos</span>
-                    </a>
+                    <section class="indice__grupo" aria-labelledby="grupo-actuar">
+                        <h3 class="indice__titulo" id="grupo-actuar">Actuar</h3>
+                        <ul class="indice__lista">
+                            <li>
+                                <a class="indice__enlace" href="leyes.html">
+                                    <span class="indice__nombre">Leyes</span>
+                                    <span class="indice__descripcion">Normas argentinas con enlaces oficiales.</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="indice__enlace" href="ayuda.html">
+                                    <span class="indice__nombre">Ayuda</span>
+                                    <span class="indice__descripcion">Líneas, pasos para denunciar y qué guardar como prueba.</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </section>
                 </div>
 
                 <div class="alerta alerta--info alerta--separada">
