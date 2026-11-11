@@ -112,6 +112,7 @@
 [data-tema="alto-contraste"] .nav-submenu,
 [data-tema="alto-contraste"] .tarjeta,
 [data-tema="alto-contraste"] .entrada,
+[data-tema="alto-contraste"] .indice__grupo,
 [data-tema="alto-contraste"] .acordeon,
 [data-tema="alto-contraste"] .alerta {
     border-width: 2px;
@@ -119,10 +120,6 @@
 
 [data-tema="alto-contraste"] .barra-ayuda {
     box-shadow: none;
-}
-
-[data-tema="alto-contraste"] .heroe::before {
-    display: none;
 }
 
 [data-tema="alto-contraste"] a {
@@ -136,6 +133,7 @@
 [data-tema="alto-contraste"] .nav-submenu a,
 [data-tema="alto-contraste"] .nav-movil > summary,
 [data-tema="alto-contraste"] .entrada,
+[data-tema="alto-contraste"] .indice__enlace,
 [data-tema="alto-contraste"] .tarjeta--enlace,
 [data-tema="alto-contraste"] .boton {
     text-decoration: none;

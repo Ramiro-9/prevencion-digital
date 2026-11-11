@@ -721,57 +721,37 @@
     transform: none;
 }
 
-.heroe {
-    position: relative;
-    overflow: hidden;
-    padding-block: clamp(3rem, 8vw, 5.5rem) clamp(2.5rem, 6vw, 4rem);
+/* ---- Portada: presentación compacta y entradas por perfil -------------- */
+.portada__presentacion {
+    border-bottom: 1px solid var(--borde);
+    background: var(--superficie);
+    padding-block: clamp(1.25rem, 3vw, 2rem);
 }
 
-.heroe::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    background:
-        radial-gradient(circle at 12% 8%, rgba(106, 76, 174, 0.18), transparent 42%),
-        radial-gradient(circle at 88% 18%, rgba(23, 76, 143, 0.14), transparent 45%);
-}
-
-.heroe > .contenedor {
-    position: relative;
-}
-
-.heroe__etiqueta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.4rem;
-    margin: 0 0 var(--esp-4);
-    padding: 0.3rem 0.7rem;
-    border-radius: var(--radio-pill);
-    background: var(--acento-suave);
-    color: var(--acento-texto);
+.portada__rotulo {
+    margin: 0 0 var(--esp-2);
+    color: var(--primario);
     font-size: var(--texto-xs);
     font-weight: var(--peso-extra);
     letter-spacing: 0.08em;
     text-transform: uppercase;
 }
 
-.heroe h1 {
-    max-width: 22ch;
-    margin-bottom: var(--esp-4);
+.portada__cabecera h1 {
+    max-width: 26ch;
+    margin-bottom: var(--esp-2);
+    font-size: var(--texto-2xl);
 }
 
-.heroe__bajada {
-    max-width: 58ch;
+.portada__bajada {
+    max-width: 46ch;
     margin-bottom: 0;
     color: var(--texto-suave);
-    font-size: var(--texto-lg);
 }
 
 .entradas {
     display: grid;
-    gap: var(--esp-4);
-    margin-top: var(--esp-6);
+    gap: var(--esp-3);
 }
 
 @media (min-width: 760px) {
@@ -780,13 +760,30 @@
     }
 }
 
+@media (min-width: 1100px) {
+    .portada__rejilla {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1.55fr);
+        align-items: center;
+        gap: var(--esp-6);
+    }
+
+    .portada__cabecera h1 {
+        max-width: 20ch;
+    }
+
+    .portada__bajada {
+        max-width: 34ch;
+    }
+}
+
 .entrada {
     position: relative;
     display: flex;
     flex-direction: column;
-    gap: var(--esp-3);
+    gap: var(--esp-2);
     height: 100%;
-    padding: var(--esp-5);
+    padding: var(--esp-4) var(--esp-5);
     border: 1px solid var(--borde);
     border-top: 6px solid var(--acento);
     border-radius: var(--radio-lg);
@@ -828,7 +825,7 @@
 
 .entrada h2 {
     margin: 0;
-    font-size: var(--texto-xl);
+    font-size: var(--texto-lg);
 }
 
 .entrada p {
@@ -853,6 +850,73 @@
 
 .entrada:hover .entrada__cta::after {
     transform: translateX(3px);
+}
+
+/* ---- Portada: índice en tres bloques (Entender, Temas, Actuar) --------- */
+.indice {
+    display: grid;
+    gap: var(--esp-4);
+}
+
+@media (min-width: 1100px) {
+    .indice {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: var(--esp-5);
+    }
+}
+
+.indice__grupo {
+    align-self: start;
+    padding: var(--esp-4) var(--esp-5) var(--esp-2);
+    border: 1px solid var(--borde);
+    border-top: 4px solid var(--primario);
+    border-radius: var(--radio-lg);
+    background: var(--superficie);
+}
+
+.indice__titulo {
+    margin: 0 0 var(--esp-2);
+    color: var(--primario);
+    font-size: var(--texto-sm);
+    font-weight: var(--peso-extra);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.indice__lista {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.indice__lista > li + li {
+    border-top: 1px solid var(--borde);
+}
+
+.indice__enlace {
+    display: flex;
+    flex-direction: column;
+    gap: var(--esp-1);
+    margin-inline: calc(var(--esp-3) * -1);
+    padding: var(--esp-3);
+    border-radius: var(--radio-md);
+    color: var(--texto);
+    text-decoration: none;
+}
+
+.indice__enlace:hover {
+    background: var(--primario-suave);
+}
+
+.indice__nombre {
+    font-weight: var(--peso-fuerte);
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+}
+
+.indice__descripcion {
+    color: var(--texto-suave);
+    font-size: var(--texto-sm);
 }
 
 .tarjeta {
